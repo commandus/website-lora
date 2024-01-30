@@ -1,0 +1,16 @@
+.nav-menu-container {
+    width: 100%;
+    height: 800pt;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  
+  .nav-menu-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nav-menu-sidenav {
+    padding: 20px;
+  }

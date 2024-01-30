@@ -1,0 +1,26 @@
+<mat-drawer-container class="nav-menu-container" autosize>
+    <button mat-icon-button aria-label="Меню 1" matTooltip="Меню" (click)="drawer.toggle()">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-drawer #drawer class="nav-menu-sidenav" mode="side">
+        <mat-list class="nav-menu-content">
+            <div mat-subheader>Folders</div>
+            @for (folder of folders; track folder) {
+                <mat-list-item>
+                <mat-icon matListItemIcon>folder</mat-icon>
+                <div matListItemTitle>{{folder.name}}</div>
+                <div matListItemLine>{{folder.updated | date}}</div>
+                </mat-list-item>
+            }
+            <mat-divider></mat-divider>
+            <div mat-subheader>Notes</div>
+            @for (note of notes; track note) {
+                <mat-list-item>
+                <mat-icon matListItemIcon>note</mat-icon>
+                <div matListItemTitle>{{note.name}}</div>
+                <div matListItemLine>{{note.updated | date}}</div>
+                </mat-list-item>
+            }
+        </mat-list>
+    </mat-drawer>
+</mat-drawer-container>

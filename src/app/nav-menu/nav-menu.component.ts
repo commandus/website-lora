@@ -5,6 +5,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import { DatePipe } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
 
 export interface Section {
   name: string;
@@ -14,11 +15,14 @@ export interface Section {
 @Component({
   selector: 'app-nav-menu',
   standalone: true,
-  imports: [MatIconModule, MatSidenavModule, MatMenuModule, MatListModule, MatDividerModule, DatePipe],
+  imports: [MatIconModule, MatSidenavModule, MatButtonModule, MatMenuModule, MatListModule, MatDividerModule, DatePipe],
   templateUrl: './nav-menu.component.html',
   styleUrl: './nav-menu.component.css'
 })
 export class NavMenuComponent {
+  
+  expanded = false;
+
   folders: Section[] = [
     {
       name: 'Photos',

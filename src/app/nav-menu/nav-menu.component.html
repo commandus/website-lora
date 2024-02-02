@@ -1,9 +1,13 @@
 <mat-drawer-container class="nav-menu-container" autosize>
     <button mat-icon-button aria-label="Меню 1" matTooltip="Меню" (click)="drawer.toggle()">
-        <mat-icon>chevron_right</mat-icon>
+        @if (drawer.opened) {
+            <mat-icon>chevron_left</mat-icon>
+        } @else {
+            <mat-icon>chevron_right</mat-icon>
+        }
     </button>
     <mat-drawer #drawer class="nav-menu-sidenav" mode="side">
-        <mat-list class="nav-menu-content">
+        <mat-selection-list class="nav-menu-content" [multiple]="false">
             <div mat-subheader>Folders</div>
             @for (folder of folders; track folder) {
                 <mat-list-item>
@@ -21,6 +25,6 @@
                 <div matListItemLine>{{note.updated | date}}</div>
                 </mat-list-item>
             }
-        </mat-list>
+        </mat-selection-list>
     </mat-drawer>
 </mat-drawer-container>

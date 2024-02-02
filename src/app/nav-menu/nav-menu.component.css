@@ -1,7 +1,6 @@
 .nav-menu-container {
     width: 100%;
     height: 800pt;
-    border: 1px solid rgba(0, 0, 0, 0.5);
   }
   
   .nav-menu-sidenav-content {
@@ -14,3 +13,8 @@
   .nav-menu-sidenav {
     padding: 20px;
   }
+
+  .mat-mdc-list-item-icon {
+    color: rgba(0, 0, 0, 0.54);
+  }
+  

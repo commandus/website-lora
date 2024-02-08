@@ -1,30 +1,37 @@
-<mat-drawer-container class="nav-menu-container" autosize>
-    <button mat-icon-button aria-label="Меню 1" matTooltip="Меню" (click)="drawer.toggle()">
-        @if (drawer.opened) {
-            <mat-icon>chevron_left</mat-icon>
-        } @else {
-            <mat-icon>chevron_right</mat-icon>
-        }
-    </button>
-    <mat-drawer #drawer class="nav-menu-sidenav" mode="side">
+<mat-drawer-container class="nav-menu-container">
+    <mat-drawer #drawer class="nav-menu-sidenav" mode="side" opened="true">
         <mat-selection-list class="nav-menu-content" [multiple]="false">
-            <div mat-subheader>Folders</div>
-            @for (folder of folders; track folder) {
+            <div mat-subheader>Калькулятор</div>
+            @for (c of calcs; track calcs) {
+                <div (click)="nav(c.path)">
                 <mat-list-item>
-                <mat-icon matListItemIcon>folder</mat-icon>
-                <div matListItemTitle>{{folder.name}}</div>
-                <div matListItemLine>{{folder.updated | date}}</div>
+                <mat-icon matListItemIcon>{{c.icon}}</mat-icon>
+                <div matListItemTitle>{{c.name}}</div>
+                <div matListItemLine>{{c.desc}}</div>
                 </mat-list-item>
+            </div>
             }
             <mat-divider></mat-divider>
-            <div mat-subheader>Notes</div>
-            @for (note of notes; track note) {
+            <div mat-subheader>Пакет</div>
+            @for (p of parsers; track parsers) {
+                <div (click)="nav(p.path)">
                 <mat-list-item>
-                <mat-icon matListItemIcon>note</mat-icon>
-                <div matListItemTitle>{{note.name}}</div>
-                <div matListItemLine>{{note.updated | date}}</div>
+                <mat-icon matListItemIcon>{{p.icon}}</mat-icon>
+                <div matListItemTitle>{{p.name}}</div>
+                <div matListItemLine>{{p.desc}}</div>
                 </mat-list-item>
+            </div>
             }
         </mat-selection-list>
     </mat-drawer>
+    <mat-drawer-content class="nav-menu-sidenav-content">
+        <button mat-icon-button aria-label="Меню 1" matTooltip="Меню" (click)="drawer.toggle()">
+            @if (drawer.opened) {
+                <mat-icon>chevron_left</mat-icon>
+            } @else {
+                <mat-icon>chevron_right</mat-icon>
+            }
+        </button>
+        <router-outlet />
+    </mat-drawer-content>
 </mat-drawer-container>

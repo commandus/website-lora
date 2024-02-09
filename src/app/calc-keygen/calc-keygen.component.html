@@ -1,1 +1,39 @@
-<p>calc-keygen works!</p>
+<form #keygenForm [formGroup]="formGroup">
+    Генератор ключей
+    <div fxLayout="row" fxLayoutAlign="stretch" >
+        <div>
+            <mat-form-field class="addr">
+                <mat-label>Адрес устройства</mat-label>
+                <input matInput type="text" placeholder="Адрес" formControlName="addr" (change)="onChanged($event)">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="masterkey">
+                <mat-label>Мастер-ключ</mat-label>
+                <input matInput type="text" placeholder="Мастер-ключ" formControlName="masterkey" (change)="onChanged($event)">
+            </mat-form-field>
+        </div>
+        <div>
+            <button mat-button color="primary" mat-button type="submit">Создать</button>  
+        </div>
+        <p></p>
+        <div>
+            <mat-form-field class="addr">
+                <mat-label>Идентификатор устройства eui</mat-label>
+                <input matInput readonly type="text" placeholder="Идентификатор устройства EUI" [value]="value.eui">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="addr">
+                <mat-label>Сетевой ключ nwk</mat-label>
+                <input matInput readonly type="text" placeholder="Сетевой ключ" [value]="value.nwkKey">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="addr">
+                <mat-label>Ключ приложения app</mat-label>
+                <input matInput readonly type="text" placeholder="Ключ приложения" [value]="value.appKey">
+            </mat-form-field>
+        </div>
+    </div>
+</form>

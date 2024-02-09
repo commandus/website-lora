@@ -8,7 +8,8 @@ describe('CalcKeygenComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CalcKeygenComponent]
+      imports: [CalcKeygenComponent],
+
     })
     .compileComponents();
     

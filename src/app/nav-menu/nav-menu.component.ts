@@ -20,7 +20,7 @@ export interface Section {
   standalone: true,
   imports: [RouterOutlet, MatIconModule, MatSidenavModule, MatButtonModule, MatMenuModule, MatListModule, MatDividerModule, DatePipe],
   templateUrl: './nav-menu.component.html',
-  styleUrl: './nav-menu.component.css'
+  styleUrl: './nav-menu.component.scss'
 })
 export class NavMenuComponent {
   @ViewChild('drawer') drawer!: MatDrawer;

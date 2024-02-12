@@ -11,7 +11,7 @@ import { EnvService } from '../../svc/env';
   standalone: true,
   imports: [MatButtonModule, MatIconModule, MatMenuModule],
   templateUrl: './top-menu.component.html',
-  styleUrl: './top-menu.component.css'
+  styleUrl: './top-menu.component.scss'
 })
 export class TopMenuComponent implements OnInit{
   public version = '';

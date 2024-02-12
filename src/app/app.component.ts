@@ -12,7 +12,7 @@ import { TopMenuComponent } from './top-menu/top-menu.component';
     TopMenuComponent
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'lora';

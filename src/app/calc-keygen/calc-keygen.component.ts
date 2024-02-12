@@ -11,7 +11,7 @@ import { KeyGenResponse } from '../../model/keygenresponse';
   standalone: true,
   imports: [FormsModule, ReactiveFormsModule, MatInputModule, MatButtonModule],
   templateUrl: './calc-keygen.component.html',
-  styleUrl: './calc-keygen.component.css'
+  styleUrl: './calc-keygen.component.scss'
 })
 export class CalcKeygenComponent implements OnInit {
   

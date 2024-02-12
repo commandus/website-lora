@@ -7,7 +7,7 @@ import { NavMenuComponent } from '../nav-menu/nav-menu.component';
   standalone: true,
   imports: [TopMenuComponent, NavMenuComponent],
   templateUrl: './control-panel.component.html',
-  styleUrl: './control-panel.component.css'
+  styleUrl: './control-panel.component.scss'
 })
 export class ControlPanelComponent {
 

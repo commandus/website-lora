@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './welcome.component.html',
-  styleUrl: './welcome.component.css'
+  styleUrl: './welcome.component.scss'
 })
 export class WelcomeComponent {
 

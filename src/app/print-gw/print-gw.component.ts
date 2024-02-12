@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './print-gw.component.html',
-  styleUrl: './print-gw.component.css'
+  styleUrl: './print-gw.component.scss'
 })
 export class PrintGwComponent {
 

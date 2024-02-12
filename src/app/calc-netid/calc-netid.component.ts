@@ -11,7 +11,7 @@ import { EnvService } from '../../svc/env';
   standalone: true,
   imports: [FormsModule, ReactiveFormsModule, MatInputModule, MatButtonModule],
   templateUrl: './calc-netid.component.html',
-  styleUrl: './calc-netid.component.css'
+  styleUrl: './calc-netid.component.scss'
 })
 export class CalcNetidComponent implements OnInit {
   

@@ -10,12 +10,13 @@ class EndPoint {
   public name = '';
 }
 
+// 'https://' + window.location.hostname + 
 @Injectable({
   providedIn: 'root'
 })
 export class CalcService {
   constructor(private httpClient: HttpClient) { }
-  public endpoint: EndPoint = { url: 'http://localhost:8050/clause', name: 'ws-lora'};
+  public endpoint: EndPoint = { url: '/json/clause', name: 'server-side'};
 
   version(): Observable<Version> {
     const request = ['version'];
@@ -27,6 +28,10 @@ export class CalcService {
   }
   keygen(aMasterKey: string, aAddr: string): Observable<KeyGenResponse> {
     const request = ['keygen',  aMasterKey, aAddr];
+    return this.httpClient.post<KeyGenResponse>(this.endpoint.url, request);
+  }
+  classes(): Observable<KeyGenResponse> {
+    const request = ['classes'];
     return this.httpClient.post<KeyGenResponse>(this.endpoint.url, request);
   }
 }

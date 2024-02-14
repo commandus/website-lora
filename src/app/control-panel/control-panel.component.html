@@ -1,2 +1,7 @@
-<app-top-menu></app-top-menu>
-<app-nav-menu></app-nav-menu>
+<mat-drawer-container class="full-page">
+    <mat-drawer #drawer mode="side" opened="false"></mat-drawer>
+    <mat-drawer-content class="nav-menu-sidenav-content">
+        <app-top-menu></app-top-menu>
+        <app-nav-menu></app-nav-menu>
+    </mat-drawer-content>
+</mat-drawer-container>

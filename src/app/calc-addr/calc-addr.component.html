@@ -1,18 +1,23 @@
-<span class="form-header">Сеть по адресу устройства</span>
-<form #netidForm [formGroup]="formGroup">
+<span class="form-header">Адреса устройств сети</span>
+<form #addrForm [formGroup]="formGroup">
     <div fxLayout="row" fxLayoutAlign="stretch" >
         <div>
             <mat-form-field class="addr">
-                <mat-label>Адрес устройства</mat-label>
-                <input matInput type="text" placeholder="Адрес" formControlName="addr" (change)="onAddrChanged($event)">
+                <mat-label>Тип сети</mat-label>
+                <input matInput type="number" placeholder="0..7" formControlName="nwktype" (change)="onChanged($event)">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="addr">
+                <mat-label>Номер сети</mat-label>
+                <input matInput type="number" placeholder="Номер сети" formControlName="nwkid" (change)="onChanged($event)">
             </mat-form-field>
         </div>
         <div>
             <button mat-button color="primary" mat-button type="submit">Показать</button>  
         </div>
         <p></p>
-
-        @if(addrCapacity) {
+        @if(addrSpace) {
         <div>
             <table>
                 <tr>
@@ -112,7 +117,7 @@
                         {{value.addrMax}}
                     </td>
                     <td>
-                        {{addrCapacity}}
+                        {{addrSpace}}
                     </td>
                 </tr>
             </table>

@@ -16,6 +16,11 @@ import { EnvService } from '../../svc/env';
 export class CalcNetidComponent implements OnInit {
   
   @Input() @Output() value: NetId = new NetId;
+  binPrefix = '';
+  binNwkid = '';
+  binAddr = '';
+  hexAddr = '';
+  addrCapacity = 0;
 
   public formGroup: FormGroup = new FormGroup({});
 
@@ -39,6 +44,16 @@ export class CalcNetidComponent implements OnInit {
   load(addr: string): void {
     this.env.calc.netid(addr).subscribe(v => {
       this.value = v;
+      if (addr == '') {
+        this.addrCapacity = 0;
+        return;
+      }
+
+      this.binPrefix = v.binary.substring(0, v.prefixlen);
+      this.binNwkid = v.binary.substring(v.prefixlen, v.prefixlen + v.nwkidlen);
+      this.binAddr = v.binary.substring(v.prefixlen + v.nwkidlen);
+      this.hexAddr = (parseInt(v.addr, 16) & ((1 << v.addrlen) - 1)).toString(16);
+      this.addrCapacity = parseInt(v.addrMax, 16) - parseInt(v.addrMin, 16);
     })
   }
 

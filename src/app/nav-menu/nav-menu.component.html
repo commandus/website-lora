@@ -25,7 +25,7 @@
         </mat-selection-list>
     </mat-drawer>
     <mat-drawer-content class="nav-menu-sidenav-content">
-        <button mat-icon-button aria-label="Меню 1" matTooltip="Меню" (click)="drawer.toggle()">
+        <button mat-icon-button aria-label="Меню" matTooltip="Меню" (click)="drawer.toggle()" class="toogle-nav">
             @if (drawer.opened) {
                 <mat-icon>chevron_left</mat-icon>
             } @else {

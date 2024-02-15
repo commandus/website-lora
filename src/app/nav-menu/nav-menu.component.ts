@@ -66,15 +66,21 @@ export class NavMenuComponent implements OnInit {
   calcs: Section[] = [
     {
       name: 'Адрес',
-      desc: 'Идентификатор сети',
+      desc: 'Показать сеть',
       path: 'netid',
-      icon: 'folder'
+      icon: 'tag'
+    },
+    {
+      name: 'Сеть',
+      desc: 'Показать адреса',
+      path: 'addr',
+      icon: 'cloud'
     },
     {
       name: 'Ключи',
       desc: 'Генератор ключей',
       path: 'keygen',
-      icon: 'folder'
+      icon: 'key'
     }
   ];
   parsers: Section[] = [
@@ -82,13 +88,13 @@ export class NavMenuComponent implements OnInit {
       name: 'Радио',
       desc: 'Радио пакет',
       path: 'rfm',
-      icon: 'note'
+      icon: 'wifi'
     },
     {
       name: 'Шлюз',
       desc: 'Пакет от шлюза',
       path: 'gw',
-      icon: 'note'
+      icon: 'router'
     }
   ];
 

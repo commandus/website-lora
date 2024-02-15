@@ -10,13 +10,16 @@ class EndPoint {
   public name = '';
 }
 
-// 'https://' + window.location.hostname + 
+// const svc = 'https://' + window.location.hostname;
+// const svc = '';
+const svc = 'https://lora.commandus.com';
+
 @Injectable({
   providedIn: 'root'
 })
 export class CalcService {
   constructor(private httpClient: HttpClient) { }
-  public endpoint: EndPoint = { url: '/json/clause', name: 'server-side'};
+  public endpoint: EndPoint = { url: svc + '/json/clause', name: 'server-side'};
 
   version(): Observable<Version> {
     const request = ['version'];
@@ -24,6 +27,10 @@ export class CalcService {
   }
   netid(aAddr: string): Observable<NetId> {
     const request = ['netid',  aAddr];
+    return this.httpClient.post<NetId>(this.endpoint.url, request);
+  }
+  addrs(typ: number, nwkId: string): Observable<NetId> {
+    const request = ['addrs',  typ, nwkId];
     return this.httpClient.post<NetId>(this.endpoint.url, request);
   }
   keygen(aMasterKey: string, aAddr: string): Observable<KeyGenResponse> {

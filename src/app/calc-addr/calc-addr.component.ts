@@ -64,7 +64,6 @@ export class CalcAddrComponent implements OnInit {
     if(!control.value) 
       return null;
     console.log(control);
-    console.log(this);
     if ((control.value < 0) || (control.value > this.getNwkSpace()))
       return { invalidSymbols: true };
     return null;

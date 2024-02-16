@@ -6,11 +6,7 @@ import { TopMenuComponent } from './top-menu/top-menu.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    RouterOutlet,
-    ControlPanelComponent,
-    TopMenuComponent
-  ],
+  imports: [RouterOutlet, ControlPanelComponent, TopMenuComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

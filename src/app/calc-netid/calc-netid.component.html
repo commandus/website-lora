@@ -1,12 +1,16 @@
 <span class="form-header">Сеть по адресу устройства</span>
-<form #netidForm [formGroup]="formGroup">
+<form>
     <div fxLayout="row" fxLayoutAlign="stretch" >
         <div>
             <mat-form-field class="addr">
                 <mat-label>Адрес устройства</mat-label>
-                <input matInput type="text" placeholder="Адрес" formControlName="addr" (change)="onAddrChanged($event)">
+                <input matInput type="text" placeholder="Адрес" [formControl]="addr" (change)="onAddrChanged($event)">
             </mat-form-field>
+                @if(addr.invalid) {
+                    <mat-error>Адрес- шестнадцатиричное число</mat-error>
+                }
         </div>
+        <p></p>
         <div>
             <button mat-button color="primary" mat-button type="submit">Показать</button>  
         </div>
@@ -79,7 +83,7 @@
                         {{value.type}}
                     </td>
                     <td>
-                        {{value.netid}}
+                        {{value.nwkId}}
                     </td>
                     <td>
                         {{hexAddr}}
@@ -89,7 +93,7 @@
 
             <p></p>
             <div>
-                Адреса для типа сети {{value.type}}, идентификатора сети {{value.netid}}
+                Адреса для идентификатора сети {{value.nwkId}}
             </div>
 
             <table>

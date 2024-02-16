@@ -1,17 +1,23 @@
 <span class="form-header">Адреса устройств сети</span>
-<form #addrForm [formGroup]="formGroup">
+<form>
     <div fxLayout="row" fxLayoutAlign="stretch" >
         <div>
             <mat-form-field class="addr">
                 <mat-label>Тип сети</mat-label>
-                <input matInput type="number" placeholder="0..7" formControlName="nwktype" (change)="onChanged($event)">
+                <input matInput type="number" placeholder="0..7" [formControl]="nwktype" (change)="onChanged($event)">
             </mat-form-field>
-        </div>
+            @if(nwktype.invalid) {
+                <mat-error>Тип сети 0..7</mat-error>
+            }
+    </div>
         <div>
             <mat-form-field class="addr">
                 <mat-label>Номер сети</mat-label>
-                <input matInput type="number" placeholder="Номер сети" formControlName="nwkid" (change)="onChanged($event)">
+                <input matInput type="text" placeholder="Cеть (hex)" [formControl]="nwkid" (change)="onChanged($event)">
             </mat-form-field>
+            @if(nwkid.invalid) {
+                <mat-error>Номер сети: шестнадцатиричное число</mat-error>
+            }
         </div>
         <div>
             <button mat-button color="primary" mat-button type="submit">Показать</button>  

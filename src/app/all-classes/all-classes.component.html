@@ -1,0 +1,65 @@
+<span class="form-header">Типы сетей</span>
+<div>
+    <table>
+        <tr>
+            <td>
+                Тип    
+            </td>
+            <td>
+                Сетей в типе
+            </td>
+            <td>
+                Адресов в сети
+            </td>
+            <td>
+                Min сеть
+            </td>
+            <td>
+                Min адрес
+            </td>
+            <td>
+                Max адрес
+            </td>
+            <td>
+                Max сеть
+            </td>
+            <td>
+                Min адрес
+            </td>
+            <td>
+                Max адрес
+            </td>
+        </tr>
+    @for(v of value; track v.type) {
+        <tr>
+            <td>
+                {{ v.type }}
+            </td>
+            <td>
+                {{ bits2len(v.nwkidlen) }}
+            </td>
+            <td>
+                {{ bits2len(v.addrlen) }}
+            </td>
+            <td>
+                {{ v.nwkMin }}
+            </td>
+            <td>
+                {{ v.nwkMinAddrMin}}
+            </td>
+            <td>
+                {{ v.nwkMinAddrMin}}
+            </td>
+            <td>
+                {{ v.nwkMax }}
+            </td>
+            <td>
+                {{ v.nwkMaxAddrMin}}
+            </td>
+            <td>
+                {{ v.nwkMaxAddrMin}}
+            </td>
+        </tr>
+    }
+    </table>
+</div>

@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Version } from '../model/version';
 import { NetId } from '../model/netid';
 import { KeyGenResponse } from '../model/keygenresponse';
+import { ClassResponse } from '../model/classesresponse';
 
 class EndPoint {
   public url = '';
@@ -37,8 +38,8 @@ export class CalcService {
     const request = ['keygen',  aMasterKey, aAddr];
     return this.httpClient.post<KeyGenResponse>(this.endpoint.url, request);
   }
-  classes(): Observable<KeyGenResponse> {
+  classes(): Observable<ClassResponse[]> {
     const request = ['classes'];
-    return this.httpClient.post<KeyGenResponse>(this.endpoint.url, request);
+    return this.httpClient.post<ClassResponse[]>(this.endpoint.url, request);
   }
 }

@@ -81,6 +81,12 @@ export class NavMenuComponent implements OnInit {
       desc: 'Генератор ключей',
       path: 'keygen',
       icon: 'key'
+    },
+    {
+      name: 'Типы',
+      desc: 'Список типов сетей',
+      path: 'classes',
+      icon: '123'
     }
   ];
   parsers: Section[] = [

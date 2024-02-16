@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
-import { FormsModule, ReactiveFormsModule, FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
+import { FormControl, Validators, FormsModule, ReactiveFormsModule, AbstractControl } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 
@@ -22,10 +22,10 @@ export class CalcAddrComponent implements OnInit {
   nwkSpace = 0;
   addrSpace = 0;
 
-  public formGroup: FormGroup = new FormGroup({});
-
+  nwktype = new FormControl(this.value.type ? this.value.type : '', [ Validators.required, Validators.min(0), Validators.max(7) ]);
+  nwkid = new FormControl(this.value.nwkId ? this.value.nwkId : '', [ Validators.required, this.NetworkValidator ]);
+  
   constructor(
-    private formBuilder: FormBuilder,
     public env: EnvService
   ) { 
 
@@ -33,9 +33,9 @@ export class CalcAddrComponent implements OnInit {
 
   private validateType(): void {
     if (this.value.type > 7)
-    this.value.type = 0;
+      this.value.type = 0;
     if (this.value.type < 0)
-    this.value.type = 0;
+      this.value.type = 0;
   }
 
   // version 1.1
@@ -71,11 +71,7 @@ export class CalcAddrComponent implements OnInit {
 
   ngOnInit(): void {
     if (!this.value)
-    this.value = new NetId;
-    this.formGroup = this.formBuilder.group({
-      nwktype: [this.value.type ? this.value.type : '', [ Validators.required, Validators.min(0), Validators.max(7) ]],
-      nwkid: [this.value.nwkId ? this.value.nwkId : '', [ Validators.required, this.NetworkValidator ]]
-    });
+      this.value = new NetId;
   }
 
   load(): void {
@@ -96,8 +92,8 @@ export class CalcAddrComponent implements OnInit {
   }
 
   onChanged($event: any) {
-    this.value.type = this.formGroup.getRawValue().nwktype;
-    this.value.nwkId = this.formGroup.getRawValue().nwkid;
+    this.value.type = this.nwktype.value ? parseInt(this.nwktype.value as string) : 0;
+    this.value.nwkId = this.nwkid.value ? this.nwkid.value : '';
     this.load();
   }
 }

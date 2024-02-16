@@ -29,3 +29,22 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 [Theming](https://material.angular.io/guide/theming)
 [2](https://thecodeshewrites.com/2021/06/16/angular-material-dark-light-theme/#htoc-theme-management-with-angular-material)
+
+# Test
+
+```
+wget -q -S -O - --post-data '["classes"]' http://localhost:8050/clause
+wget -q -S -O - --post-data '["classes"]' https://lora.commandus.com/json/clause
+```
+
+1E246
+
+Addr f123456789
+Bin	11110	001001000110	100010101100111
+Длина, бит	5	12	15
+Hex	0	246	4567
+
+
+{"addr": "f1234567", "netid": "800246", "type": 4, "id": "246", "nwkId": "246", "binary": "11110001001000110100010101100111","prefixlen": 5,"nwkidlen": 12,"addrlen": 15, "addrMin": "f2460000", "minbinary": "11110010010001100000000000000000","minprefixlen": 5,"minnwkidlen": 12,"minaddrlen": 15, "addrMax": "f2467fff", "maxbinary": "11110010010001100111111111111111","maxprefixlen": 5,"maxnwkidlen": 12,"maxaddrlen": 15}
+
+

@@ -1,10 +1,10 @@
 <span class="form-header">Сеть по адресу устройства</span>
-<form>
+<form (ngSubmit)="onSubmit()">
     <div fxLayout="row" fxLayoutAlign="stretch" >
         <div>
             <mat-form-field class="addr">
                 <mat-label>Адрес устройства</mat-label>
-                <input matInput type="text" placeholder="Адрес" [formControl]="addr" (change)="onAddrChanged($event)">
+                <input matInput type="text" placeholder="hex" [formControl]="addr" (change)="onSubmit()">
             </mat-form-field>
                 @if(addr.invalid) {
                     <mat-error>Адрес- шестнадцатиричное число</mat-error>

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { FormControl, Validators, FormsModule, ReactiveFormsModule, AbstractControl } from '@angular/forms';
 
 import { MatInputModule } from '@angular/material/input';
@@ -15,7 +15,7 @@ import { EnvService } from '../../svc/env';
   styleUrl: './calc-netid.component.scss'
 })
 
-export class CalcNetidComponent implements OnInit {
+export class CalcNetidComponent {
   
   @Input() @Output() value: NetId = new NetId;
   binPrefix = '';
@@ -31,11 +31,6 @@ export class CalcNetidComponent implements OnInit {
 
   }
   
-  ngOnInit(): void {
-    if (!this.value)
-      this.value = new NetId;
-  }
-
   load(): void {
     this.env.calc.netid(this.value.addr).subscribe(v => {
       this.value = v;
@@ -48,11 +43,11 @@ export class CalcNetidComponent implements OnInit {
       this.binNwkid = v.binary.substring(v.prefixlen, v.prefixlen + v.nwkidlen);
       this.binAddr = v.binary.substring(v.prefixlen + v.nwkidlen);
       this.hexAddr = (parseInt(v.addr, 16) & ((1 << v.addrlen) - 1)).toString(16);
-      this.addrCapacity = parseInt(v.addrMax, 16) - parseInt(v.addrMin, 16);
+      this.addrCapacity = parseInt(v.addrMax, 16) - parseInt(v.addrMin, 16) + 1;
     })
   }
 
-  onAddrChanged($event: any) {
+  onSubmit() {
     this.value.addr = this.addr.value ? this.addr.value as string : '';
     this.load();
   }

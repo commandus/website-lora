@@ -5,6 +5,8 @@ import { Version } from '../model/version';
 import { NetId } from '../model/netid';
 import { KeyGenResponse } from '../model/keygenresponse';
 import { ClassResponse } from '../model/classesresponse';
+import { RFM } from '../model/rfm';
+import { GwResponse } from '../model/gwresponse';
 
 class EndPoint {
   public url = '';
@@ -37,6 +39,14 @@ export class CalcService {
   keygen(aMasterKey: string, aAddr: string): Observable<KeyGenResponse> {
     const request = ['keygen',  aMasterKey, aAddr];
     return this.httpClient.post<KeyGenResponse>(this.endpoint.url, request);
+  }
+  rfm(hex: string): Observable<RFM> {
+    const request = ['rfm',  hex];
+    return this.httpClient.post<RFM>(this.endpoint.url, request);
+  }
+  gw(hex: string): Observable<GwResponse> {
+    const request = ['gw',  hex];
+    return this.httpClient.post<GwResponse>(this.endpoint.url, request);
   }
   classes(): Observable<ClassResponse[]> {
     const request = ['classes'];

@@ -1,12 +1,40 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
+import { FormControl, Validators, FormsModule, ReactiveFormsModule, AbstractControl } from '@angular/forms';
+
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+
+import { EnvService } from '../../svc/env';
+import { RFM } from '../../model/rfm';
 
 @Component({
   selector: 'app-print-rfm',
   standalone: true,
-  imports: [],
+  imports: [FormsModule, ReactiveFormsModule, MatInputModule, MatButtonModule],
   templateUrl: './print-rfm.component.html',
   styleUrl: './print-rfm.component.scss'
 })
 export class PrintRfmComponent {
-
-}
+    
+    @Input() @Output() value = new RFM;
+    packetHex = '';
+    packet = new FormControl('', [ Validators.required ]);
+  
+    constructor(
+      public env: EnvService
+    ) { 
+  
+    }
+    
+    load(): void {
+      this.env.calc.rfm(this.packetHex).subscribe(v => {
+        this.value = v;
+      })
+    }
+  
+    onChanged($event: any) {
+      this.packetHex = this.packet.value ? this.packet.value as string : '';
+      this.load();
+    }
+  }
+  

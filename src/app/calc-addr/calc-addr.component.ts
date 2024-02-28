@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { FormControl, Validators, FormsModule, ReactiveFormsModule, AbstractControl } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -13,7 +13,7 @@ import { EnvService } from '../../svc/env';
   templateUrl: './calc-addr.component.html',
   styleUrl: './calc-addr.component.scss'
 })
-export class CalcAddrComponent implements OnInit {
+export class CalcAddrComponent {
   @Input() @Output() value: NetId = new NetId;
   binPrefix = '';
   binNwkid = '';
@@ -52,26 +52,20 @@ export class CalcAddrComponent implements OnInit {
 
   private getAddrSpace() : number {
     this.validateType();
-    return (1 << this.DEVADDR_TYPE_SIZES_1_1[this.value.type].a) - 1;
+    return (1 << this.DEVADDR_TYPE_SIZES_1_1[this.value.type].a);
   }
 
   private getNwkSpace() : number {
     this.validateType();
-    return (1 << this.DEVADDR_TYPE_SIZES_1_1[this.value.type].n) - 1;
+    return (1 << this.DEVADDR_TYPE_SIZES_1_1[this.value.type].n);
   }
 
   private NetworkValidator(control: AbstractControl): { [key: string]: any } | null {
     if(!control.value) 
       return null;
-    console.log(control);
-    if ((control.value < 0) || (control.value > this.getNwkSpace()))
+    if ((control.value < 0))
       return { invalidSymbols: true };
     return null;
-  }
-
-  ngOnInit(): void {
-    if (!this.value)
-      this.value = new NetId;
   }
 
   load(): void {
@@ -91,7 +85,7 @@ export class CalcAddrComponent implements OnInit {
     })
   }
 
-  onChanged($event: any) {
+  onSubmit() {
     this.value.type = this.nwktype.value ? parseInt(this.nwktype.value as string) : 0;
     this.value.nwkId = this.nwkid.value ? this.nwkid.value : '';
     this.load();

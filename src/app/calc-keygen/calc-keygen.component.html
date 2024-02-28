@@ -1,16 +1,16 @@
-<form #keygenForm [formGroup]="formGroup">
+<form (ngSubmit)="onSubmit()">
     Генератор ключей
     <div fxLayout="row" fxLayoutAlign="stretch" >
         <div>
             <mat-form-field class="addr">
                 <mat-label>Адрес устройства</mat-label>
-                <input matInput type="text" placeholder="Адрес" formControlName="addr" (change)="onChanged($event)">
+                <input matInput type="text" placeholder="Адрес" [formControl]="addr" (change)="onSubmit()">
             </mat-form-field>
         </div>
         <div>
             <mat-form-field class="masterkey">
                 <mat-label>Мастер-ключ</mat-label>
-                <input matInput type="text" placeholder="Мастер-ключ" formControlName="masterkey" (change)="onChanged($event)">
+                <input matInput type="text" placeholder="Мастер-ключ" [formControl]="masterkey" (change)="onSubmit()">
             </mat-form-field>
         </div>
         <div>

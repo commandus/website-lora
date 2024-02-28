@@ -1,19 +1,19 @@
 <span class="form-header">Адреса устройств сети</span>
-<form>
+<form (ngSubmit)="onSubmit()">
     <div fxLayout="row" fxLayoutAlign="stretch" >
         <div>
-            <mat-form-field class="addr">
+            <mat-form-field class="nwktype">
                 <mat-label>Тип сети</mat-label>
-                <input matInput type="number" placeholder="0..7" [formControl]="nwktype" (change)="onChanged($event)">
+                <input matInput type="number" placeholder="0..7" [formControl]="nwktype" (change)="onSubmit()">
             </mat-form-field>
             @if(nwktype.invalid) {
                 <mat-error>Тип сети 0..7</mat-error>
             }
-    </div>
+        </div>
         <div>
-            <mat-form-field class="addr">
+            <mat-form-field class="nwkid">
                 <mat-label>Номер сети</mat-label>
-                <input matInput type="text" placeholder="Cеть (hex)" [formControl]="nwkid" (change)="onChanged($event)">
+                <input matInput type="text" placeholder="Cеть (hex)" [formControl]="nwkid" (change)="onSubmit()">
             </mat-form-field>
             @if(nwkid.invalid) {
                 <mat-error>Номер сети: шестнадцатиричное число</mat-error>
@@ -112,6 +112,9 @@
                         Max
                     </td>
                     <td>
+                        Всего сетей в типе
+                    </td>
+                    <td>
                         Всего адресов
                     </td>
                 </tr>
@@ -121,6 +124,9 @@
                     </td>
                     <td>
                         {{value.addrMax}}
+                    </td>
+                    <td>
+                        {{nwkSpace}}
                     </td>
                     <td>
                         {{addrSpace}}

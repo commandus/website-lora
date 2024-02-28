@@ -29,10 +29,11 @@ export class EnvService{
             this.swUpdate.versionUpdates.pipe(
                 filter((evt: any): evt is VersionReadyEvent => evt.type === 'VERSION_READY'),
                 map((evt: any) => {
+                    console.info(`currentVersion=[${evt.currentVersion} | latestVersion=[${evt.latestVersion}]`);
                     const snack = this.snackbar.open('Доступна новая верcия', 'Обновить', {duration: 6000});
                     snack.onAction().subscribe(() => {
-                        // window.location.reload();
-                        this.swUpdate.activateUpdate();
+                        window.location.reload();
+                        // this.swUpdate.activateUpdate();
                     });
             }));
         }
@@ -92,6 +93,30 @@ export class EnvService{
     
     public closePwa(): void {
         this.pwaPlatformSubject.next('');
+    }
+
+    public mtype2string(value: number): string
+      {
+      switch (value) {
+        case 0:
+            return "join-request";
+        case 1:
+            return "join-accept";
+        case 2:
+            return "unconfirmed-data-up";
+        case 3:
+            return "unconfirmed-data-down";
+        case 4:
+            return "confirmed-data-up";
+        case 5:
+            return "confirmed-data-down";
+        case 6:
+            return "rejoin-request";
+        case 7:
+            return "proprietary-radio";
+        default:
+            return "";
+      }
     }
 
 }

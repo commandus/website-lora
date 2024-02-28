@@ -1,1 +1,60 @@
-<p>print-rfm works!</p>
+<span class="form-header">Радио пакет</span>
+<form>
+    <div fxLayout="row" fxLayoutAlign="stretch" >
+        <div>
+            <mat-form-field class="packet">
+                <mat-label>Пакет</mat-label>
+                <input matInput type="text" placeholder="hex" [formControl]="packet" (change)="onChanged($event)">
+            </mat-form-field>
+                @if(packet.invalid) {
+                    <mat-error>Последовательность шестнадцатиричных чисел</mat-error>
+                }
+        </div>
+        <p></p>
+        <div>
+            <button mat-button color="primary" mat-button type="submit">Показать</button>  
+        </div>
+        <p></p>
+
+        @if(value.mhdr.mtype) {
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        Тип пакета
+                    </td>
+                    <td>
+                        Адрес
+                    </td>
+                    <td>
+                        FCnt
+                    </td>
+                    <td>
+                        FPort
+                    </td>
+                    <td>
+                        Payload
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ env.mtype2string(value.mhdr.mtype) }}
+                    </td>
+                    <td>
+                        {{value.addr}}
+                    </td>
+                    <td>
+                        {{value.fcnt}}
+                    </td>
+                    <td>
+                        {{value.fport}}
+                    </td>
+                    <td>
+                        {{value.payload}}
+                    </td>
+                </tr>
+           </table>
+        </div>
+    }
+    </div>
+</form>

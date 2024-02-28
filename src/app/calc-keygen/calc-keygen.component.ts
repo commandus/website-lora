@@ -1,9 +1,8 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
-import { FormsModule, ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, Input, Output } from '@angular/core';
+import { FormsModule, ReactiveFormsModule, Validators, FormControl } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { EnvService } from '../../svc/env';
-import { NetId } from '../../model/netid';
 import { KeyGenResponse } from '../../model/keygenresponse';
 
 @Component({
@@ -13,26 +12,17 @@ import { KeyGenResponse } from '../../model/keygenresponse';
   templateUrl: './calc-keygen.component.html',
   styleUrl: './calc-keygen.component.scss'
 })
-export class CalcKeygenComponent implements OnInit {
+export class CalcKeygenComponent {
   
     @Input() @Output() value: KeyGenResponse = new KeyGenResponse;
   
-    public formGroup: FormGroup = new FormGroup({});
-  
+    addr = new FormControl(this.value.addr ? this.value.addr : '', [ Validators.required ]);
+    masterkey = new FormControl('', [ Validators.required ]);
+
     constructor(
-      private formBuilder: FormBuilder,
       public env: EnvService
     ) { 
   
-    }
-  
-    ngOnInit(): void {
-      if (!this.value)
-      this.value = new KeyGenResponse;
-      this.formGroup = this.formBuilder.group({
-          addr: [this.value.addr ? this.value.addr : '', [ Validators.required ]],
-          masterkey: ['', [ Validators.required ]]
-      });
     }
   
     load(masterkey: string, addr: string): void {
@@ -41,10 +31,8 @@ export class CalcKeygenComponent implements OnInit {
       })
     }
   
-    onChanged($event: any) {
-      const v = this.formGroup.getRawValue();
-      this.value.addr = v.addr;
-      this.load(v.masterkey, v.addr);
+    onSubmit() {
+      this.load(this.masterkey.value ? this.masterkey.value : '', this.addr.value ? this.addr.value as string : '');
     }
   }
   

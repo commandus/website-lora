@@ -106,6 +106,7 @@ export class NavMenuComponent implements OnInit {
 
   nav(path: string): void {
     this.router.navigateByUrl(path);
-    this.drawer.close();
+    if (window.innerWidth < 550)
+      this.drawer.close();
   }
 }

@@ -7,6 +7,6 @@
         <mat-icon>wifi_off</mat-icon>
     }
     <mat-menu #menu="matMenu">
-        <app-dark-mode-switch></app-dark-mode-switch>
+        <app-dark-mode-switch [checked]="env.settings.darkMode" (darkThemeOn)="env.darkThemeOn($event)"></app-dark-mode-switch>
     </mat-menu>
 </div>

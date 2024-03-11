@@ -15,7 +15,6 @@ import { RFM } from '../../model/rfm';
   styleUrl: './print-rfm.component.scss'
 })
 export class PrintRfmComponent {
-    
     @Input() @Output() value = new RFM;
     packetHex = '';
     packet = new FormControl('', [ Validators.required ]);

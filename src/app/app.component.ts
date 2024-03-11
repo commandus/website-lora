@@ -18,33 +18,11 @@ export class AppComponent {
     return this.env.settings.darkMode ? 'dark' : 'light';
   }
 
-  public getDarkThemeOn($event: boolean) {
-    this.env.settings.darkMode = $event;
-    this.renderPageBodyColor();
-    this.applyThemeToOverlyContainers();
-  }
-
   constructor(
-    private env: EnvService,
-    private renderer: Renderer2,
-    private overlayContainer: OverlayContainer
+    private env: EnvService
   ) {
     // @see https://thecodeshewrites.com/2021/06/16/angular-material-dark-light-theme/#htoc-theme-management-with-angular-material
-    this.renderPageBodyColor();
-    this.applyThemeToOverlyContainers();
+    this.env.darkThemeOn(this.env.settings.darkMode);
   }
   
-  private renderPageBodyColor() {
-    this.renderer.removeClass(document.body, 'dark');
-    this.renderer.removeClass(document.body, 'light');
-    this.renderer.addClass(document.body, this.env.settings.darkMode ? 'dark' : 'light');
-  }
-
-private applyThemeToOverlyContainers() {
-    const overlayContainerClasses = this.overlayContainer.getContainerElement().classList;
-    const classesToRemove = Array.from(overlayContainerClasses).filter(item => item.includes('app-theme-'));
-    overlayContainerClasses.remove(...classesToRemove); 
-    this.overlayContainer.getContainerElement().classList.add(this.env.settings.darkMode ? 'dark' : 'light');
-  }
-
 }

@@ -5,6 +5,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router, RouterOutlet } from '@angular/router';
 import { EnvService } from '../../svc/env';
@@ -13,13 +14,14 @@ export interface Section {
   name: string;
   desc: string;
   path: string;
+  tip: string;
   icon: string;
 }
 
 @Component({
   selector: 'app-nav-menu',
   standalone: true,
-  imports: [RouterOutlet, MatIconModule, MatSidenavModule, MatButtonModule, MatMenuModule, MatListModule, MatDividerModule],
+  imports: [RouterOutlet, MatIconModule, MatSidenavModule, MatButtonModule, MatTooltipModule, MatMenuModule, MatListModule, MatDividerModule],
   templateUrl: './nav-menu.component.html',
   styleUrl: './nav-menu.component.scss'
 })
@@ -68,24 +70,28 @@ export class NavMenuComponent implements OnInit {
       name: 'Адрес',
       desc: 'Показать сеть',
       path: 'netid',
+      tip: 'Какой сети принадлежит адрес',
       icon: 'tag'
     },
     {
       name: 'Сеть',
       desc: 'Показать адреса',
       path: 'addr',
+      tip: 'Диапазон адресов по номеру сети типа 0..7',
       icon: 'cloud'
     },
     {
       name: 'Ключи',
       desc: 'Генератор ключей',
       path: 'keygen',
+      tip: 'Сгенерировать для адреса сети EUI и ключи',
       icon: 'key'
     },
     {
       name: 'Типы',
       desc: 'Список типов сетей',
       path: 'classes',
+      tip: 'Диапазоны адресов для всех типов сетей',
       icon: '123'
     }
   ];
@@ -94,12 +100,14 @@ export class NavMenuComponent implements OnInit {
       name: 'Радио',
       desc: 'Радио пакет',
       path: 'rfm',
+      tip: 'Разобрать пакет, переданный в эфир',
       icon: 'wifi'
     },
     {
       name: 'Шлюз',
       desc: 'Пакет от шлюза',
       path: 'gw',
+      tip: 'Разобрать пакет, полученный со шлюза',
       icon: 'router'
     }
   ];

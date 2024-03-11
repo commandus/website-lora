@@ -4,10 +4,10 @@
             <div mat-subheader>Калькулятор</div>
             @for (c of calcs; track calcs) {
                 <div (click)="nav(c.path)">
-                <mat-list-item>
-                <mat-icon matListItemIcon>{{c.icon}}</mat-icon>
-                <div matListItemTitle>{{c.name}}</div>
-                <div matListItemLine>{{c.desc}}</div>
+                <mat-list-item [matTooltip]="c.tip">
+                    <mat-icon matListItemIcon>{{c.icon}}</mat-icon>
+                    <div matListItemTitle>{{c.name}}</div>
+                    <div matListItemLine>{{c.desc}}</div>
                 </mat-list-item>
             </div>
             }
@@ -15,17 +15,17 @@
             <div mat-subheader>Пакет</div>
             @for (p of parsers; track parsers) {
                 <div (click)="nav(p.path)">
-                <mat-list-item>
-                <mat-icon matListItemIcon>{{p.icon}}</mat-icon>
-                <div matListItemTitle>{{p.name}}</div>
-                <div matListItemLine>{{p.desc}}</div>
+                <mat-list-item [matTooltip]="p.tip">
+                    <mat-icon matListItemIcon>{{p.icon}}</mat-icon>
+                    <div matListItemTitle>{{p.name}}</div>
+                    <div matListItemLine>{{p.desc}}</div>
                 </mat-list-item>
             </div>
             }
         </mat-selection-list>
     </mat-drawer>
     <mat-drawer-content class="nav-menu-sidenav-content">
-        <button mat-icon-button aria-label="Меню" matTooltip="Меню" (click)="drawer.toggle()" class="toogle-nav">
+        <button mat-icon-button aria-label="Меню" [matTooltip]="drawer.opened ? 'Скрыть панель навигации' : 'Откоыть панель навигации'" (click)="drawer.toggle()" class="toogle-nav">
             @if (drawer.opened) {
                 <mat-icon>chevron_left</mat-icon>
             } @else {

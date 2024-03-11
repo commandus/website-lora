@@ -1,10 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Renderer2, RendererFactory2 } from '@angular/core';
 import { CalcService } from './calc.svc';
 import { Platform } from '@angular/cdk/platform';
 import { BehaviorSubject, Subscription } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Settings } from '../model/settings';
 import { CheckForUpdateService } from './sw-update.svc';
+import { OverlayContainer } from '@angular/cdk/overlay';
 
 
 @Injectable({
@@ -22,14 +23,17 @@ export class EnvService{
     public settings = new Settings(localStorage.getItem('settings'));
 
     private isNewAppAvailable: Subscription;
+    private renderer: Renderer2;
 
     constructor(
         private platform: Platform,
         private snackbar: MatSnackBar,
         public calc: CalcService,
-        private checkForUpdateService: CheckForUpdateService
+        private checkForUpdateService: CheckForUpdateService,
+        private overlayContainer: OverlayContainer,
+        private rendererFactory: RendererFactory2
     ) {
-
+        this.renderer = rendererFactory.createRenderer(null, null);
         this.isNewAppAvailable = checkForUpdateService.isAnyNewUpdateAvailable.subscribe((avail: boolean) => {
             if (!avail)
                 return;
@@ -123,5 +127,20 @@ export class EnvService{
     public darkThemeOn(on: boolean) : void {
         this.settings.darkMode = on;
         this.settings.save();
+        this.renderPageBodyColor();
+        this.applyThemeToOverlayContainers();
+    }
+
+    private renderPageBodyColor() {
+        this.renderer.removeClass(document.body, 'dark');
+        this.renderer.removeClass(document.body, 'light');
+        this.renderer.addClass(document.body, this.settings.darkMode ? 'dark' : 'light');
+    }
+
+    private applyThemeToOverlayContainers() {
+        const overlayContainerClasses = this.overlayContainer.getContainerElement().classList;
+        const classesToRemove = Array.from(overlayContainerClasses).filter(item => item.includes('app-theme-'));
+        overlayContainerClasses.remove(...classesToRemove); 
+        this.overlayContainer.getContainerElement().classList.add(this.settings.darkMode ? 'dark' : 'light');
     }
 }

@@ -11,8 +11,12 @@
         }
       },
       "i18n":{
-        "sourceLocale": "en-US",
-        "locales": {"ru-RU": "src/locale/messages.ru.xlf"}
+        "sourceLocale": "en",
+        "locales": {
+          "ru": {
+            "translation": "src/locale/messages.ru.xlf",
+          }
+        }
       },
       "root": "",
       "sourceRoot": "src",
@@ -22,7 +26,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "localize": [
-              "ru-RU"
+              "ru"
             ],
             "outputPath": "dist/website-lora",
             "index": "src/index.html",

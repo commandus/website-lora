@@ -67,51 +67,55 @@ export class NavMenuComponent implements OnInit {
 
   calcs: Section[] = [
     {
-      name: 'Адрес',
-      desc: 'Показать сеть',
+      name: $localize `:@@address:Address`,
+      desc: $localize `:@@show-network:Show network`,
       path: 'netid',
-      tip: 'Какой сети принадлежит адрес',
+      tip: $localize `:@@which-network:Which network does the address belong to`,
       icon: 'tag'
     },
     {
-      name: 'Сеть',
-      desc: 'Показать адреса',
+      name: $localize `:@@network:Network`,
+      desc: $localize `:@@show-addresses:Show addresses`,
       path: 'addr',
-      tip: 'Диапазон адресов по номеру сети типа 0..7',
+      tip: $localize `:@@address-range-by-type:Address range by network number type 0..7`,
       icon: 'cloud'
     },
     {
-      name: 'Ключи',
-      desc: 'Генератор ключей',
+      name: $localize `:@@keys:Keys`,
+      desc: $localize `:@@keygen:Keygen`,
       path: 'keygen',
-      tip: 'Сгенерировать для адреса сети EUI и ключи',
+      tip: $localize `:@@generate-keys:Generate EUI, nwk & app keys for network address`,
       icon: 'key'
     },
     {
-      name: 'Типы',
-      desc: 'Список типов сетей',
+      name: $localize `:@@types:Types`,
+      desc: $localize `:@@type-list:List of network types`,
       path: 'classes',
-      tip: 'Диапазоны адресов для всех типов сетей',
+      tip: $localize `:@@types-tip:Address ranges for all network types`,
       icon: '123'
     }
   ];
   parsers: Section[] = [
     {
-      name: 'Радио',
-      desc: 'Радио пакет',
+      name: $localize `:@@radio:Radio`,
+      desc: $localize `:@@radio-packet:Radio packet`,
       path: 'rfm',
-      tip: 'Разобрать пакет, переданный в эфир',
+      tip: $localize `:@@radio-tip:Print the packet transmitted on the air`,
       icon: 'wifi'
     },
     {
-      name: 'Шлюз',
-      desc: 'Пакет от шлюза',
+      name: $localize `:@@gateway:Gateway`,
+      desc: $localize `:@@gateway-packet:Gateway packet`,
       path: 'gw',
-      tip: 'Разобрать пакет, полученный со шлюза',
+      tip: $localize `:@@gateway-tip:Print the packet received from the gateway`,
       icon: 'router'
     }
   ];
 
+  drawerTip(opened: boolean) : string {
+    return opened ? $localize `:@@hide-sidenav:Hide sidenav` : $localize `:@@show-sidenav:Show sidenav`
+  }
+  
   nav(path: string): void {
     this.router.navigateByUrl(path);
     if (window.innerWidth < 550)

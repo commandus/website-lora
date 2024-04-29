@@ -1,13 +1,13 @@
 <div class="top-row">
-    <button mat-icon-button [matMenuTriggerFor]="menu" matTooltip="Меню" aria-label="Меню">
+    <button i18n-matTooltip="@@menu" i18n-aria-label="@@menu" mat-icon-button [matMenuTriggerFor]="menu" matTooltip="Menu" aria-label="Menu">
         <mat-icon>menu</mat-icon>
     </button>
-    <span class="form-header" [matTooltip]="'Версия ' + version">LoRaWAN oнлайн калькулятор</span>
+    <span i18n="@@lorawan-calculator-online" class="form-header" [matTooltip]="'v. ' + version">LoRaWAN calculator online</span>
     @if (!env.isOnline) {
         <mat-icon>wifi_off</mat-icon>
     }
     <mat-menu #menu="matMenu">
-        <button mat-menu-item (click)="nav('/')">Первая страница</button>
-        <app-dark-mode-switch matTooltip="Светлая или темная тема" [checked]="env.settings.darkMode" (darkThemeOn)="env.darkThemeOn($event)"></app-dark-mode-switch>
+        <button i18n="@@home-page" mat-menu-item (click)="nav('/')">Home page</button>
+        <app-dark-mode-switch i18n-matTooltip="@@light-or-dark-theme" matTooltip="Light or dark theme" [checked]="env.settings.darkMode" (darkThemeOn)="env.darkThemeOn($event)"></app-dark-mode-switch>
     </mat-menu>
 </div>

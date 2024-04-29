@@ -1,18 +1,18 @@
-<span class="form-header">Сеть по адресу устройства</span>
+<span class="form-header" i18n="@@network-by-device-address">Network by device address</span>
 <form (ngSubmit)="onSubmit()">
     <div fxLayout="row" fxLayoutAlign="stretch" >
         <div>
             <mat-form-field class="addr">
-                <mat-label>Адрес устройства</mat-label>
+                <mat-label i18n="@@device-address">Device address</mat-label>
                 <input matInput type="text" placeholder="hex" [formControl]="addr" (change)="onSubmit()">
             </mat-form-field>
                 @if(addr.invalid) {
-                    <mat-error>Адрес- шестнадцатиричное число</mat-error>
+                    <mat-error i18n="@@device-adddress-is-hex">Device address is an hex number</mat-error>
                 }
         </div>
         <p></p>
         <div>
-            <button mat-button color="primary" mat-button type="submit">Показать</button>  
+            <button i18n="@@show" mat-button color="primary" mat-button type="submit">Show</button>  
         </div>
         <p></p>
 
@@ -20,37 +20,21 @@
         <div>
             <table>
                 <tr>
-                    <td>
-                        Сеть
-                    </td>
-                    <td>
-                        Тип сети
-                    </td>
-                    <td>
-                        Идентификатор сети
-                    </td>
-                    <td>
-                        Адрес в сети
-                    </td>
+                    <td i18n="@@network">Network</td>
+                    <td i18n="@@network-type">Network type</td>
+                    <td i18n="@@network-identifier">Network identifier</td>
+                    <td i18n="@@network-address">Network address</td>
                 </tr>
                 <tr>
                     <td>
                         
                     </td>
-                    <td>
-                        NwkType
-                    </td>
-                    <td>
-                        NwkId
-                    </td>
-                    <td>
-                        NwkAddr
-                    </td>
+                    <td i18n="@@nwktype">NwkType</td>
+                    <td i18n="@@nwkid">NwkId</td>
+                    <td i18n="@@nwkaddr">NwkAddr</td>
                 </tr>
                 <tr>
-                    <td>
-                        Bin
-                    </td>
+                    <td i18n="@@bin">Bin</td>
                     <td>
                         {{binPrefix}}
                     </td>
@@ -62,9 +46,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        Длина, бит
-                    </td>
+                    <td i18n="@@length-bits">Length, bits</td>
                     <td>
                         {{value.prefixlen}}
                     </td>
@@ -76,9 +58,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        Hex
-                    </td>
+                    <td i18n="@@hex">Hex</td>
                     <td>
                         {{value.type}}
                     </td>
@@ -92,21 +72,13 @@
            </table>
 
             <p></p>
-            <div>
-                Адреса для идентификатора сети {{value.nwkId}}
-            </div>
+            <div i18n="@@addresses-for-network-identifier">Addresses for network identifier {{value.nwkId}}</div>
 
             <table>
                 <tr>
-                    <td>
-                        Min
-                    </td>
-                    <td>
-                        Max
-                    </td>
-                    <td>
-                        Всего адресов
-                    </td>
+                    <td i18n="@@min">Min</td>
+                    <td i18n="@@max">Max</td>
+                    <td i18n="@@total-addresses">Total addresses</td>
                 </tr>
                 <tr>
                     <td>

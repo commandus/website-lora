@@ -10,6 +10,10 @@
           "style": "scss"
         }
       },
+      "i18n":{
+        "sourceLocale": "en-US",
+        "locales": {"ru-RU": "src/locale/messages.ru.xlf"}
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -17,6 +21,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "localize": [
+              "ru-RU"
+            ],
             "outputPath": "dist/website-lora",
             "index": "src/index.html",
             "browser": "src/main.ts",

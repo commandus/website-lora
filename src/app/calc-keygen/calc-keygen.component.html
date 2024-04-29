@@ -1,38 +1,38 @@
+<span class="form-header" i18n="@@keygen">Keygen</span>
 <form (ngSubmit)="onSubmit()">
-    Генератор ключей
     <div fxLayout="row" fxLayoutAlign="stretch" >
         <div>
             <mat-form-field class="addr">
-                <mat-label>Адрес устройства</mat-label>
-                <input matInput type="text" placeholder="Адрес" [formControl]="addr" (change)="onSubmit()">
+                <mat-label i18n="@@device-address">Device address</mat-label>
+                <input i18n-placeholder="@@address" matInput type="text" placeholder="Address" [formControl]="addr" (change)="onSubmit()">
             </mat-form-field>
         </div>
         <div>
             <mat-form-field class="masterkey">
-                <mat-label>Мастер-ключ</mat-label>
-                <input matInput type="text" placeholder="Мастер-ключ" [formControl]="masterkey" (change)="onSubmit()">
+                <mat-label i18n="@@masterkey">Masterkey</mat-label>
+                <input i18n-placeholder="@@masterkey" matInput type="text" placeholder="Masterkey" [formControl]="masterkey" (change)="onSubmit()">
             </mat-form-field>
         </div>
         <div>
-            <button mat-button color="primary" mat-button type="submit">Создать</button>  
+            <button i18n="@@generate" mat-button color="primary" mat-button type="submit">Generate</button>  
         </div>
         <p></p>
         <div>
             <mat-form-field class="addr">
-                <mat-label>Идентификатор устройства eui</mat-label>
-                <input matInput readonly type="text" placeholder="Идентификатор устройства EUI" [value]="value.eui">
+                <mat-label i18n="@@device-identifier-eui">Device identifier eui</mat-label>
+                <input i18n-placeholder="@@device-identifier-eui" matInput readonly type="text" placeholder="Device identifier eui" [value]="value.eui">
             </mat-form-field>
         </div>
         <div>
             <mat-form-field class="addr">
-                <mat-label>Сетевой ключ nwk</mat-label>
-                <input matInput readonly type="text" placeholder="Сетевой ключ" [value]="value.nwkKey">
+                <mat-label i18n="@@network-key-nwk">Network key nwk</mat-label>
+                <input i18n-placeholder="@@network-key-nwk" matInput readonly type="text" placeholder="Network key nwk" [value]="value.nwkKey">
             </mat-form-field>
         </div>
         <div>
             <mat-form-field class="addr">
-                <mat-label>Ключ приложения app</mat-label>
-                <input matInput readonly type="text" placeholder="Ключ приложения" [value]="value.appKey">
+                <mat-label i18n="@@network-key-app">Application key app</mat-label>
+                <input i18n-placeholder="@@network-key-app" matInput readonly type="text" placeholder="Application key app" [value]="value.appKey">
             </mat-form-field>
         </div>
     </div>

@@ -1,136 +1,104 @@
-<span class="form-header">пакет шлюза</span>
+<span class="form-header" i18n="@@gateway-packet">Gateway packet</span>
 <form>
     <div fxLayout="row" fxLayoutAlign="stretch" >
         <div>
             <mat-form-field class="packet">
-                <mat-label>Пакет</mat-label>
+                <mat-label i18n="@@packet">Packet</mat-label>
                 <input matInput type="text" placeholder="hex" [formControl]="packet" (change)="onChanged($event)">
             </mat-form-field>
                 @if(packet.invalid) {
-                    <mat-error>Последовательность шестнадцатиричных чисел</mat-error>
+                    <mat-error i18n="@@hex-string">Hex string</mat-error>
                 }
         </div>
         <p></p>
         <div>
-            <button mat-button color="primary" mat-button type="submit">Показать</button>  
+            <button i18n="@@show" mat-button color="primary" mat-button type="submit">Show</button>  
         </div>
         <p></p>
         @if(value.code) {
-            <div>
-                Ошибка {{value.code}}: {{value.error}}
-            </div>
+            <div i18n="@@error-code-error">Error {{value.code}}: {{value.error}}</div>
         }
         @if(value.rfm.mhdr.mtype) {
         <div>
             <table>
                 <tr>
-                    <td>
-                        Метаданные
-                    </td>
-                    <td>
-                        Значение
-                    </td>
+                    <td i18n="@@metadata">Metadata</td>
+                    <td i18n="@@value">Value</td>
                 </tr>
                 <tr>
-                    <td>
-                        Шлюз
-                    </td>
+                    <td i18n="@@gateway">Gateway</td>
                     <td>
                         {{ value.metadata.gatewayId }}
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        Время
-                    </td>
+                    <td i18n="@@time">Time</td>
                     <td>
                         {{ value.metadata.time }}
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        tmst
-                    </td>
+                    <td i18n="@@tmst">tmst</td>
                     <td>
                         {{ value.metadata.tmst }}
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        chan
-                    </td>
+                    <td i18n="@@chan">chan</td>
                     <td>
                         {{ value.metadata.chan }}
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        rfch
-                    </td>
+                    <td i18n="@@rfch">rfch</td>
                     <td>
                         {{ value.metadata.rfch }}
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        Частота, МГц
-                    </td>
+                    <td i18n="@@frequency-mhz">Frequency, MHz</td>
                     <td>
                         {{ value.metadata.freq / 1000000 }}
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        stat
-                    </td>
+                    <td i18n="@@stat">stat</td>
                     <td>
                         {{ value.metadata.stat }}
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        Модуляция
-                    </td>
+                    <td i18n="@@modulation">Modulation</td>
                     <td>
                         {{ value.metadata.modu }}
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        Data rate
-                    </td>
+                    <td i18n="@@data-rate">Data rate</td>
                     <td>
                         {{ value.metadata.datr }}
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        Coding rate
-                    </td>
+                    <td i18n="@@coding-rate">Coding rate</td>
                     <td>
                         {{ value.metadata.codr }}
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        BPS
-                    </td>
+                    <td i18n="@@bps">BPS</td>
                     <td>
                         {{ value.metadata.bps }}
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        RSSI
-                    </td>
+                    <td i18n="@@rssi">RSSI</td>
                     <td>
                         {{ value.metadata.rssi }}
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        LSNR
-                    </td>
+                    <td i18n="@@lsnr">LSNR</td>
                     <td>
                         {{ value.metadata.lsnr }}
                     </td>
@@ -144,60 +112,46 @@
             </tr>
             @if (value.rfm.mhdr.mtype == 2) {
             <tr>
-                <td>
-                    Адрес
-                </td>
+                <td i18n="@@address">Address</td>
                 <td>
                     {{value.rfm.uplink.addr}}
                 </td>
             </tr>
             <tr>
-                <td>
-                    foptslen
-                </td>
+                <td i18n="@@foptslen">foptslen</td>
                 <td>
                     {{value.rfm.uplink.foptslen}}
                 </td>
             </tr>
             @if (value.rfm.uplink.classb) {
             <tr>
-                <td>
-                    Класс B
-                </td>
+                <td i18n="@@class-b">Class B</td>
                 <td>
                 </td>
             </tr>
             }
             @if (value.rfm.uplink.ack) {
                 <tr>
-                    <td>
-                        ACK
-                    </td>
+                    <td i18n="@@ack">ACK</td>
                     <td>
                     </td>
                 </tr>
             }
             @if (value.rfm.uplink.adr) {
                 <tr>
-                    <td>
-                        ADR
-                    </td>
+                    <td i18n="@@adr">ADR</td>
                     <td>
                     </td>
                 </tr>
             }
             <tr>
-                <td>
-                    addrackreq
-                </td>
+                <td i18n="@@addrackreq">addrackreq</td>
                 <td>
                     {{value.rfm.uplink.addrackreq}}
                 </td>
             </tr>
             <tr>
-                <td>
-                    optsNpayload
-                </td>
+                <td i18n="@@optsnpayload">optsNpayload</td>
                 <td>
                     {{value.rfm.uplink.optsNpayload}}
                 </td>

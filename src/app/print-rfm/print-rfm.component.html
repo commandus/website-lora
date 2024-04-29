@@ -1,18 +1,18 @@
-<span class="form-header">Радио пакет</span>
+<span class="form-header" i18n="@@radio-packet">Radio packet</span>
 <form>
     <div fxLayout="row" fxLayoutAlign="stretch" >
         <div>
             <mat-form-field class="packet">
-                <mat-label>Пакет</mat-label>
+                <mat-label i18n="@@packet">Packet</mat-label>
                 <input matInput type="text" placeholder="hex" [formControl]="packet" (change)="onChanged($event)">
             </mat-form-field>
                 @if(packet.invalid) {
-                    <mat-error>Последовательность шестнадцатиричных чисел</mat-error>
+                    <mat-error i18n="@@hex-string">Hex string</mat-error>
                 }
         </div>
         <p></p>
         <div>
-            <button mat-button color="primary" mat-button type="submit">Показать</button>  
+            <button i18n="@@show" mat-button color="primary" mat-button type="submit">Show</button>  
         </div>
         <p></p>
 
@@ -20,21 +20,11 @@
         <div>
             <table>
                 <tr>
-                    <td>
-                        Тип пакета
-                    </td>
-                    <td>
-                        Адрес
-                    </td>
-                    <td>
-                        FCnt
-                    </td>
-                    <td>
-                        FPort
-                    </td>
-                    <td>
-                        Payload
-                    </td>
+                    <td i18n="@@packet-type">Packet type</td>
+                    <td i18n="@@address">Address</td>
+                    <td i18n="@@fcnt">FCnt</td>
+                    <td i18n="@@fport">FPort</td>
+                    <td i18n="@@payload">Payload</td>
                 </tr>
                 <tr>
                     <td>

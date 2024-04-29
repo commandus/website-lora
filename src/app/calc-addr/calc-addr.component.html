@@ -1,63 +1,47 @@
-<span class="form-header">Адреса устройств сети</span>
+<span class="form-header" i18n="@@device-address">Device address</span>
 <form (ngSubmit)="onSubmit()">
     <div fxLayout="row" fxLayoutAlign="stretch" >
         <div>
             <mat-form-field class="nwktype">
-                <mat-label>Тип сети</mat-label>
+                <mat-label i18n="@@network-type">Network type</mat-label>
                 <input matInput type="number" placeholder="0..7" [formControl]="nwktype" (change)="onSubmit()">
             </mat-form-field>
             @if(nwktype.invalid) {
-                <mat-error>Тип сети 0..7</mat-error>
+                <mat-error i18n="@@network-type-0-7">Network type 0..7</mat-error>
             }
         </div>
         <div>
             <mat-form-field class="nwkid">
-                <mat-label>Номер сети</mat-label>
+                <mat-label i18n="@@network-number">#network</mat-label>
                 <input matInput type="text" placeholder="Cеть (hex)" [formControl]="nwkid" (change)="onSubmit()">
             </mat-form-field>
             @if(nwkid.invalid) {
-                <mat-error>Номер сети: шестнадцатиричное число</mat-error>
+                <mat-error i18n="@@network-number-hex">#network: hex number</mat-error>
             }
         </div>
         <div>
-            <button mat-button color="primary" mat-button type="submit">Показать</button>  
+            <button i18n="@@show" mat-button color="primary" mat-button type="submit">Show</button>  
         </div>
         <p></p>
         @if(addrSpace) {
         <div>
             <table>
                 <tr>
-                    <td>
-                        Сеть
-                    </td>
-                    <td>
-                        Тип сети
-                    </td>
-                    <td>
-                        Идентификатор сети
-                    </td>
-                    <td>
-                        Адрес в сети
-                    </td>
+                    <td i18n="@@network">Network</td>
+                    <td i18n="@@network-type">Network type</td>
+                    <td i18n="@@network-id">Network id</td>
+                    <td i18n="@@network-address">Network address</td>
                 </tr>
                 <tr>
                     <td>
                         
                     </td>
-                    <td>
-                        NwkType
-                    </td>
-                    <td>
-                        NwkId
-                    </td>
-                    <td>
-                        NwkAddr
-                    </td>
+                    <td i18n="@@nwktype">NwkType</td>
+                    <td i18n="@@nwkid">NwkId</td>
+                    <td i18n="@@nwkaddr">NwkAddr</td>
                 </tr>
                 <tr>
-                    <td>
-                        Bin
-                    </td>
+                    <td i18n="@@bin">Bin</td>
                     <td>
                         {{binPrefix}}
                     </td>
@@ -69,9 +53,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        Длина, бит
-                    </td>
+                    <td i18n="@@length-bits">Length, bits</td>
                     <td>
                         {{value.prefixlen}}
                     </td>
@@ -83,9 +65,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        Hex
-                    </td>
+                    <td i18n="@@hex">Hex</td>
                     <td>
                         {{value.type}}
                     </td>
@@ -99,24 +79,14 @@
            </table>
 
             <p></p>
-            <div>
-                Адреса для типа сети {{value.type}}, идентификатора сети {{value.netid}}
-            </div>
+            <div i18n="@@addresses">Addresses of network type {{value.type}}, network id {{value.netid}}</div>
 
             <table>
                 <tr>
-                    <td>
-                        Min
-                    </td>
-                    <td>
-                        Max
-                    </td>
-                    <td>
-                        Всего сетей в типе
-                    </td>
-                    <td>
-                        Всего адресов
-                    </td>
+                    <td i18n="@@min">Min</td>
+                    <td i18n="@@max">Max</td>
+                    <td i18n="@@total-networks">Total networks</td>
+                    <td i18n="@@total-addresses">Total addresses</td>
                 </tr>
                 <tr>
                     <td>

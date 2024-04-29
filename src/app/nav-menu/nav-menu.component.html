@@ -1,7 +1,7 @@
 <mat-drawer-container class="nav-menu-container">
     <mat-drawer #drawer class="nav-menu-sidenav" mode="side" opened="true">
         <mat-selection-list class="nav-menu-content" [multiple]="false">
-            <div mat-subheader>Калькулятор</div>
+            <div mat-subheader i18n="@@calculator">Calculator</div>
             @for (c of calcs; track calcs) {
                 <div (click)="nav(c.path)">
                 <mat-list-item [matTooltip]="c.tip">
@@ -12,7 +12,7 @@
             </div>
             }
             <mat-divider></mat-divider>
-            <div mat-subheader>Пакет</div>
+            <div mat-subheader i18n="@@packet">Packet</div>
             @for (p of parsers; track parsers) {
                 <div (click)="nav(p.path)">
                 <mat-list-item [matTooltip]="p.tip">
@@ -25,7 +25,7 @@
         </mat-selection-list>
     </mat-drawer>
     <mat-drawer-content class="nav-menu-sidenav-content">
-        <button mat-icon-button aria-label="Меню" [matTooltip]="drawer.opened ? 'Скрыть панель навигации' : 'Откоыть панель навигации'" (click)="drawer.toggle()" class="toogle-nav">
+        <button i18n="@@menu-aria-label" mat-icon-button aria-label="Menu" [matTooltip]="drawerTip(drawer.opened)" (click)="drawer.toggle()" class="toogle-nav">
             @if (drawer.opened) {
                 <mat-icon>chevron_left</mat-icon>
             } @else {

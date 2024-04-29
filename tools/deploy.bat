@@ -1,0 +1,1 @@
+scp -r c:/git/website-lora/dist/website-lora/browser/* andrei@lora.commandus.com:/var/www/html/lora/

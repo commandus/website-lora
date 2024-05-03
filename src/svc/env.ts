@@ -37,7 +37,9 @@ export class EnvService{
         this.isNewAppAvailable = checkForUpdateService.isAnyNewUpdateAvailable.subscribe((avail: boolean) => {
             if (!avail)
                 return;
-            const snack = this.snackbar.open('Доступна новая верcия', 'Обновить', {duration: 6000});
+            const snack = this.snackbar.open(
+                $localize `:@@update-available:A new version is available`,
+                $localize `:@@update-do:Update`, {duration: 6000});
             snack.onAction().subscribe(() => {
                 window.location.reload();
                 // this.swUpdate.activateUpdate();

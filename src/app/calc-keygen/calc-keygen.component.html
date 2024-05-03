@@ -13,10 +13,12 @@
                 <input i18n-placeholder="@@masterkey" matInput type="text" placeholder="Masterkey" [formControl]="masterkey" (change)="onSubmit()">
             </mat-form-field>
         </div>
-        <div>
-            <button i18n="@@generate" mat-button color="primary" mat-button type="submit">Generate</button>  
-        </div>
         <p></p>
+        <div>
+            <button i18n="@@generate" mat-raised-button color="primary" mat-button type="submit">Generate</button>  
+        </div>
+        <p style="padding: 10pt;"></p>
+        @if (value.eui) {
         <div>
             <mat-form-field class="addr">
                 <mat-label i18n="@@device-identifier-eui">Device identifier eui</mat-label>
@@ -35,5 +37,6 @@
                 <input i18n-placeholder="@@network-key-app" matInput readonly type="text" placeholder="Application key app" [value]="value.appKey">
             </mat-form-field>
         </div>
+    }
     </div>
 </form>

@@ -20,10 +20,10 @@ export class CheckForUpdateService {
         const updateFound = await updates.checkForUpdate();
         if (updateFound) {
             this.isAnyNewUpdateAvailable.next(true);
-            console.log('A new version is available.');
+            console.log($localize `:@@update-available:A new version is available`);
         }
       } catch (err) {
-        console.error('Failed to check for updates: ', err);
+        console.error($localize `:@@update-failed:Failed to check for updates: `, err);
       }
     });
   }

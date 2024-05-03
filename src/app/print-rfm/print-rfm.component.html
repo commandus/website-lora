@@ -1,6 +1,6 @@
 <span class="form-header" i18n="@@radio-packet">Radio packet</span>
 <form>
-    <div fxLayout="row" fxLayoutAlign="stretch" >
+    <div>
         <div>
             <mat-form-field class="packet">
                 <mat-label i18n="@@packet">Packet</mat-label>
@@ -9,12 +9,18 @@
                 @if(packet.invalid) {
                     <mat-error i18n="@@hex-string">Hex string</mat-error>
                 }
+                @if(value.code < 0) {
+                    <div fxLayout="row" fxLayoutAlign="start center" matTooltip="{{value.code}} {{value.error}}">
+                        <mat-icon>error</mat-icon>&nbsp;
+                        <mat-error i18n="@@invalid-rfm-packet">Invalid RFM packet</mat-error>
+                    </div>
+                }
         </div>
-        <p></p>
+        <p style="padding: 10pt;"></p>
         <div>
-            <button i18n="@@show" mat-button color="primary" mat-button type="submit">Show</button>  
+            <button i18n="@@show" mat-raised-button color="primary" mat-button type="submit">Show</button>  
         </div>
-        <p></p>
+        <p style="padding: 10pt;"></p>
 
         @if(value.mhdr.mtype) {
         <div>

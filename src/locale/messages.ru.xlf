@@ -610,6 +610,15 @@
           <context context-type="linenumber">10,11</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="invalid-gw-packet" datatype="html">
+        <source>Invalid gateway packet</source>
+        <target>Неверный пакет со шлюза</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+
       <trans-unit id="error-code-error" datatype="html">
         <source>Error <x id="INTERPOLATION" equiv-text="{{value.code}}"/>: <x id="INTERPOLATION_1" equiv-text="{{value.error}}"/></source>
         <target>Ошибка <x id="INTERPOLATION" equiv-text="{{value.code}}"/>: <x id="INTERPOLATION_1" equiv-text="{{value.error}}"/></target>
@@ -778,6 +787,15 @@
           <context context-type="linenumber">154,155</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="invalid-rfm-packet" datatype="html">
+        <source>Invalid RFM packet</source>
+        <target>Неверный RFM пакет</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-rfm/print-rfm.component.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+
       <trans-unit id="packet-type" datatype="html">
         <source>Packet type</source>
         <target>Тип пакета</target>
@@ -870,6 +888,35 @@
           <context context-type="linenumber">3,4</context>
         </context-group>
       </trans-unit>
+            <trans-unit id="update-available" datatype="html">
+        <source>A new version is available</source>
+        <target>Доступна новая верcия</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/svc/env.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/svc/sw-update.svc.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="update-do" datatype="html">
+        <source>Update</source>
+        <target>Обновить</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/svc/env.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="update-failed" datatype="html">
+        <source>Failed to check for updates: </source>
+        <target>Ошибка обновления: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/svc/sw-update.svc.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+
     </body>
   </file>
 </xliff>

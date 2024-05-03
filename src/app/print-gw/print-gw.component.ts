@@ -6,11 +6,15 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { EnvService } from '../../svc/env';
 import { GwResponse } from '../../model/gwresponse';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @Component({
   selector: 'app-print-gw',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, MatInputModule, MatButtonModule],
+  imports: [FormsModule, ReactiveFormsModule, MatInputModule, MatButtonModule,
+    MatIconModule, MatTooltipModule, FlexLayoutModule],
   templateUrl: './print-gw.component.html',
   styleUrl: './print-gw.component.scss'
 })

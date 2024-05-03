@@ -10,12 +10,11 @@
                     <mat-error i18n="@@device-adddress-is-hex">Device address is an hex number</mat-error>
                 }
         </div>
-        <p></p>
+        <p style="padding: 10pt;"></p>
         <div>
-            <button i18n="@@show" mat-button color="primary" mat-button type="submit">Show</button>  
+            <button i18n="@@show" mat-raised-button color="primary" mat-button type="submit">Show</button>  
         </div>
-        <p></p>
-
+        <p style="padding: 10pt;"></p>
         @if(addrCapacity) {
         <div>
             <table>
@@ -26,9 +25,7 @@
                     <td i18n="@@network-address">Network address</td>
                 </tr>
                 <tr>
-                    <td>
-                        
-                    </td>
+                    <td></td>
                     <td i18n="@@nwktype">NwkType</td>
                     <td i18n="@@nwkid">NwkId</td>
                     <td i18n="@@nwkaddr">NwkAddr</td>
@@ -70,10 +67,8 @@
                     </td>
                 </tr>
            </table>
-
             <p></p>
             <div i18n="@@addresses-for-network-identifier">Addresses for network identifier {{value.nwkId}}</div>
-
             <table>
                 <tr>
                     <td i18n="@@min">Min</td>

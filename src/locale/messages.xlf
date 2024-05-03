@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="network-types" datatype="html">
         <source>Network types</source>
@@ -21,11 +21,11 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-addr/calc-addr.component.html</context>
-          <context context-type="linenumber">31,32</context>
+          <context context-type="linenumber">33,34</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-netid/calc-netid.component.html</context>
-          <context context-type="linenumber">24,25</context>
+          <context context-type="linenumber">23,24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="networks-in-type" datatype="html">
@@ -104,25 +104,44 @@
         <source>#network</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-addr/calc-addr.component.html</context>
-          <context context-type="linenumber">15,16</context>
+          <context context-type="linenumber">16,17</context>
         </context-group>
       </trans-unit>
       <trans-unit id="network-number-hex" datatype="html">
         <source>#network: hex number</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-addr/calc-addr.component.html</context>
-          <context context-type="linenumber">19,21</context>
+          <context context-type="linenumber">20,22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="show" datatype="html">
+        <source>Show</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/calc-addr/calc-addr.component.html</context>
+          <context context-type="linenumber">25,26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/calc-netid/calc-netid.component.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
+          <context context-type="linenumber">21,22</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-rfm/print-rfm.component.html</context>
+          <context context-type="linenumber">21,22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="network" datatype="html">
         <source>Network</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-addr/calc-addr.component.html</context>
-          <context context-type="linenumber">30,31</context>
+          <context context-type="linenumber">32,33</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-netid/calc-netid.component.html</context>
-          <context context-type="linenumber">23,24</context>
+          <context context-type="linenumber">22,23</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/nav-menu/nav-menu.component.ts</context>
@@ -133,131 +152,131 @@
         <source>Network id</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-addr/calc-addr.component.html</context>
-          <context context-type="linenumber">32,33</context>
+          <context context-type="linenumber">34,35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="network-address" datatype="html">
         <source>Network address</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-addr/calc-addr.component.html</context>
-          <context context-type="linenumber">33,35</context>
+          <context context-type="linenumber">35,37</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-netid/calc-netid.component.html</context>
-          <context context-type="linenumber">26,28</context>
+          <context context-type="linenumber">25,27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="nwktype" datatype="html">
         <source>NwkType</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-addr/calc-addr.component.html</context>
-          <context context-type="linenumber">39,40</context>
+          <context context-type="linenumber">41,42</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-netid/calc-netid.component.html</context>
-          <context context-type="linenumber">32,33</context>
+          <context context-type="linenumber">29,30</context>
         </context-group>
       </trans-unit>
       <trans-unit id="nwkid" datatype="html">
         <source>NwkId</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-addr/calc-addr.component.html</context>
-          <context context-type="linenumber">40,41</context>
+          <context context-type="linenumber">42,43</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-netid/calc-netid.component.html</context>
-          <context context-type="linenumber">33,34</context>
+          <context context-type="linenumber">30,31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="nwkaddr" datatype="html">
         <source>NwkAddr</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-addr/calc-addr.component.html</context>
-          <context context-type="linenumber">41,42</context>
+          <context context-type="linenumber">43,44</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-netid/calc-netid.component.html</context>
-          <context context-type="linenumber">34,35</context>
+          <context context-type="linenumber">31,32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="bin" datatype="html">
         <source>Bin</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-addr/calc-addr.component.html</context>
-          <context context-type="linenumber">44,45</context>
+          <context context-type="linenumber">46,47</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-netid/calc-netid.component.html</context>
-          <context context-type="linenumber">37,38</context>
+          <context context-type="linenumber">34,35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="length-bits" datatype="html">
         <source>Length, bits</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-addr/calc-addr.component.html</context>
-          <context context-type="linenumber">56,57</context>
+          <context context-type="linenumber">58,59</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-netid/calc-netid.component.html</context>
-          <context context-type="linenumber">49,50</context>
+          <context context-type="linenumber">46,47</context>
         </context-group>
       </trans-unit>
       <trans-unit id="hex" datatype="html">
         <source>Hex</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-addr/calc-addr.component.html</context>
-          <context context-type="linenumber">68,69</context>
+          <context context-type="linenumber">70,71</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-netid/calc-netid.component.html</context>
-          <context context-type="linenumber">61,62</context>
+          <context context-type="linenumber">58,59</context>
         </context-group>
       </trans-unit>
       <trans-unit id="addresses" datatype="html">
         <source>Addresses of network type <x id="INTERPOLATION" equiv-text="{{value.type}}"/>, network id <x id="INTERPOLATION_1" equiv-text="{{value.netid}}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-addr/calc-addr.component.html</context>
-          <context context-type="linenumber">82,84</context>
+          <context context-type="linenumber">84,86</context>
         </context-group>
       </trans-unit>
       <trans-unit id="min" datatype="html">
         <source>Min</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-addr/calc-addr.component.html</context>
-          <context context-type="linenumber">86,87</context>
+          <context context-type="linenumber">88,89</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-netid/calc-netid.component.html</context>
-          <context context-type="linenumber">79,80</context>
+          <context context-type="linenumber">74,75</context>
         </context-group>
       </trans-unit>
       <trans-unit id="max" datatype="html">
         <source>Max</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-addr/calc-addr.component.html</context>
-          <context context-type="linenumber">87,88</context>
+          <context context-type="linenumber">89,90</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-netid/calc-netid.component.html</context>
-          <context context-type="linenumber">80,81</context>
+          <context context-type="linenumber">75,76</context>
         </context-group>
       </trans-unit>
       <trans-unit id="total-networks" datatype="html">
         <source>Total networks</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-addr/calc-addr.component.html</context>
-          <context context-type="linenumber">88,89</context>
+          <context context-type="linenumber">90,91</context>
         </context-group>
       </trans-unit>
       <trans-unit id="total-addresses" datatype="html">
         <source>Total addresses</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-addr/calc-addr.component.html</context>
-          <context context-type="linenumber">89,91</context>
+          <context context-type="linenumber">91,93</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-netid/calc-netid.component.html</context>
-          <context context-type="linenumber">81,83</context>
+          <context context-type="linenumber">76,78</context>
         </context-group>
       </trans-unit>
       <trans-unit id="keygen" datatype="html">
@@ -283,11 +302,11 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">115,116</context>
+          <context context-type="linenumber">121,122</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-rfm/print-rfm.component.html</context>
-          <context context-type="linenumber">24,25</context>
+          <context context-type="linenumber">30,31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="masterkey" datatype="html">
@@ -305,40 +324,40 @@
         <source>Generate</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-keygen/calc-keygen.component.html</context>
-          <context context-type="linenumber">17,18</context>
+          <context context-type="linenumber">18,19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="device-identifier-eui" datatype="html">
         <source>Device identifier eui</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-keygen/calc-keygen.component.html</context>
-          <context context-type="linenumber">22,23</context>
+          <context context-type="linenumber">24,25</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-keygen/calc-keygen.component.html</context>
-          <context context-type="linenumber">23,24</context>
+          <context context-type="linenumber">25,26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="network-key-nwk" datatype="html">
         <source>Network key nwk</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-keygen/calc-keygen.component.html</context>
-          <context context-type="linenumber">28,29</context>
+          <context context-type="linenumber">30,31</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-keygen/calc-keygen.component.html</context>
-          <context context-type="linenumber">29,30</context>
+          <context context-type="linenumber">31,32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="network-key-app" datatype="html">
         <source>Application key app</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-keygen/calc-keygen.component.html</context>
-          <context context-type="linenumber">34,35</context>
+          <context context-type="linenumber">36,37</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-keygen/calc-keygen.component.html</context>
-          <context context-type="linenumber">35,36</context>
+          <context context-type="linenumber">37,38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="network-by-device-address" datatype="html">
@@ -355,29 +374,18 @@
           <context context-type="linenumber">10,12</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="show" datatype="html">
-        <source>Show</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/calc-netid/calc-netid.component.html</context>
-          <context context-type="linenumber">15,16</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/print-rfm/print-rfm.component.html</context>
-          <context context-type="linenumber">15,16</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="network-identifier" datatype="html">
         <source>Network identifier</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-netid/calc-netid.component.html</context>
-          <context context-type="linenumber">25,26</context>
+          <context context-type="linenumber">24,25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="addresses-for-network-identifier" datatype="html">
         <source>Addresses for network identifier <x id="INTERPOLATION" equiv-text="{{value.nwkId}}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-netid/calc-netid.component.html</context>
-          <context context-type="linenumber">75,77</context>
+          <context context-type="linenumber">71,72</context>
         </context-group>
       </trans-unit>
       <trans-unit id="calculator" datatype="html">
@@ -505,7 +513,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">29,30</context>
+          <context context-type="linenumber">35,36</context>
         </context-group>
       </trans-unit>
       <trans-unit id="gateway-packet" datatype="html">
@@ -516,7 +524,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">1,3</context>
+          <context context-type="linenumber">1,4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="gateway-tip" datatype="html">
@@ -551,179 +559,193 @@
           <context context-type="linenumber">10,11</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="invalid-gw-packet" datatype="html">
+        <source>Invalid gateway packet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="error-code-error" datatype="html">
         <source>Error <x id="INTERPOLATION" equiv-text="{{value.code}}"/>: <x id="INTERPOLATION_1" equiv-text="{{value.error}}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">19,21</context>
+          <context context-type="linenumber">25,27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="metadata" datatype="html">
         <source>Metadata</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">25,26</context>
+          <context context-type="linenumber">31,32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="value" datatype="html">
         <source>Value</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">26,27</context>
+          <context context-type="linenumber">32,33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="time" datatype="html">
         <source>Time</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">35,36</context>
+          <context context-type="linenumber">41,42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="tmst" datatype="html">
         <source>tmst</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">41,42</context>
+          <context context-type="linenumber">47,48</context>
         </context-group>
       </trans-unit>
       <trans-unit id="chan" datatype="html">
         <source>chan</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">47,48</context>
+          <context context-type="linenumber">53,54</context>
         </context-group>
       </trans-unit>
       <trans-unit id="rfch" datatype="html">
         <source>rfch</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">53,54</context>
+          <context context-type="linenumber">59,60</context>
         </context-group>
       </trans-unit>
       <trans-unit id="frequency-mhz" datatype="html">
         <source>Frequency, MHz</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">59,60</context>
+          <context context-type="linenumber">65,66</context>
         </context-group>
       </trans-unit>
       <trans-unit id="stat" datatype="html">
         <source>stat</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">65,66</context>
+          <context context-type="linenumber">71,72</context>
         </context-group>
       </trans-unit>
       <trans-unit id="modulation" datatype="html">
         <source>Modulation</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">71,72</context>
+          <context context-type="linenumber">77,78</context>
         </context-group>
       </trans-unit>
       <trans-unit id="data-rate" datatype="html">
         <source>Data rate</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">77,78</context>
+          <context context-type="linenumber">83,84</context>
         </context-group>
       </trans-unit>
       <trans-unit id="coding-rate" datatype="html">
         <source>Coding rate</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">83,84</context>
+          <context context-type="linenumber">89,90</context>
         </context-group>
       </trans-unit>
       <trans-unit id="bps" datatype="html">
         <source>BPS</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">89,90</context>
+          <context context-type="linenumber">95,96</context>
         </context-group>
       </trans-unit>
       <trans-unit id="rssi" datatype="html">
         <source>RSSI</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">95,96</context>
+          <context context-type="linenumber">101,102</context>
         </context-group>
       </trans-unit>
       <trans-unit id="lsnr" datatype="html">
         <source>LSNR</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">101,102</context>
+          <context context-type="linenumber">107,108</context>
         </context-group>
       </trans-unit>
       <trans-unit id="foptslen" datatype="html">
         <source>foptslen</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">121,122</context>
+          <context context-type="linenumber">127,128</context>
         </context-group>
       </trans-unit>
       <trans-unit id="class-b" datatype="html">
         <source>Class B</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">128,129</context>
+          <context context-type="linenumber">134,135</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ack" datatype="html">
         <source>ACK</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">135,136</context>
+          <context context-type="linenumber">141,142</context>
         </context-group>
       </trans-unit>
       <trans-unit id="adr" datatype="html">
         <source>ADR</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">142,143</context>
+          <context context-type="linenumber">148,149</context>
         </context-group>
       </trans-unit>
       <trans-unit id="addrackreq" datatype="html">
         <source>addrackreq</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">148,149</context>
+          <context context-type="linenumber">154,155</context>
         </context-group>
       </trans-unit>
       <trans-unit id="optsnpayload" datatype="html">
         <source>optsNpayload</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">154,155</context>
+          <context context-type="linenumber">160,161</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invalid-rfm-packet" datatype="html">
+        <source>Invalid RFM packet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-rfm/print-rfm.component.html</context>
+          <context context-type="linenumber">15,16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="packet-type" datatype="html">
         <source>Packet type</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-rfm/print-rfm.component.html</context>
-          <context context-type="linenumber">23,24</context>
+          <context context-type="linenumber">29,30</context>
         </context-group>
       </trans-unit>
       <trans-unit id="fcnt" datatype="html">
         <source>FCnt</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-rfm/print-rfm.component.html</context>
-          <context context-type="linenumber">25,26</context>
+          <context context-type="linenumber">31,32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="fport" datatype="html">
         <source>FPort</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-rfm/print-rfm.component.html</context>
-          <context context-type="linenumber">26,27</context>
+          <context context-type="linenumber">32,33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="payload" datatype="html">
         <source>Payload</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-rfm/print-rfm.component.html</context>
-          <context context-type="linenumber">27,28</context>
+          <context context-type="linenumber">33,34</context>
         </context-group>
       </trans-unit>
       <trans-unit id="menu" datatype="html">
@@ -777,6 +799,31 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/dark-mode-switch/dark-mode-switch.component.html</context>
           <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="update-available" datatype="html">
+        <source>A new version is available</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/svc/env.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/svc/sw-update.svc.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="update-do" datatype="html">
+        <source>Update</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/svc/env.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="update-failed" datatype="html">
+        <source>Failed to check for updates: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/svc/sw-update.svc.ts</context>
+          <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
     </body>

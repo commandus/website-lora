@@ -14,15 +14,13 @@ export class Settings {
     constructor(value: any = {}) {
         this.reset();
         try {
-        let v;
-        if (typeof value == 'string') {
+            let v;
+            if (typeof value == 'string')
                 v = JSON.parse(value);
-        } else {
-            v = value;
-        }
-        if (typeof v !== 'undefined') {
-            this.assign(v);
-        }
+            else
+                v = value;
+            if (typeof v !== 'undefined')
+                this.assign(v);
         } catch (error) {
         
         }

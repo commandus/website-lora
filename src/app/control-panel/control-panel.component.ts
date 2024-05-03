@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { TopMenuComponent } from '../top-menu/top-menu.component';
 import { NavMenuComponent } from '../nav-menu/nav-menu.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { EnvService } from '../../svc/env';
 
 @Component({
   selector: 'app-control-panel',

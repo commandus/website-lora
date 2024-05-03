@@ -6,11 +6,15 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { EnvService } from '../../svc/env';
 import { RFM } from '../../model/rfm';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @Component({
   selector: 'app-print-rfm',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, MatInputModule, MatButtonModule],
+  imports: [FormsModule, ReactiveFormsModule, MatInputModule, MatButtonModule,
+    MatIconModule, MatTooltipModule, FlexLayoutModule],
   templateUrl: './print-rfm.component.html',
   styleUrl: './print-rfm.component.scss'
 })
@@ -27,7 +31,7 @@ export class PrintRfmComponent {
     
     load(): void {
       this.env.calc.rfm(this.packetHex).subscribe(v => {
-        this.value = v;
+        this.value = new RFM(v);
       })
     }
   

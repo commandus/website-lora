@@ -22,13 +22,13 @@ export class CalcAddrComponent {
   nwkSpace = 0;
   addrSpace = 0;
 
-  nwktype = new FormControl(this.value.type ? this.value.type : '', [ Validators.required, Validators.min(0), Validators.max(7) ]);
+  nwktype = new FormControl(this.value.type ? this.value.type : 0, [ Validators.required, Validators.min(0), Validators.max(7) ]);
   nwkid = new FormControl(this.value.nwkId ? this.value.nwkId : '', [ Validators.required, this.NetworkValidator ]);
   
   constructor(
     public env: EnvService
   ) { 
-
+    (this.nwkid as any).that = this;
   }
 
   private validateType(): void {
@@ -60,10 +60,23 @@ export class CalcAddrComponent {
     return (1 << this.DEVADDR_TYPE_SIZES_1_1[this.value.type].n);
   }
 
+  private NWK_SIZES = [
+    64, 64, 512, 2048, 4096, 8192, 32768, 131072
+  ];
+
   private NetworkValidator(control: AbstractControl): { [key: string]: any } | null {
+    const p : CalcAddrComponent = (control as any).that;
+    if (!p)
+      return null;
+    let t = p.nwktype.value ? p.nwktype.value : 0;
+    if ((t < 0) || (t > 7))
+      t = 0;
+
     if(!control.value) 
       return null;
     if ((control.value < 0))
+      return { invalidSymbols: true };
+    if ((control.value >= p.NWK_SIZES[t]))
       return { invalidSymbols: true };
     return null;
   }
@@ -86,7 +99,7 @@ export class CalcAddrComponent {
   }
 
   onSubmit() {
-    this.value.type = this.nwktype.value ? parseInt(this.nwktype.value as string) : 0;
+    this.value.type = this.nwktype.value ? this.nwktype.value : 0;
     this.value.nwkId = this.nwkid.value ? this.nwkid.value : '';
     this.load();
   }

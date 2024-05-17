@@ -6,6 +6,7 @@ import { PrintRfmComponent } from './print-rfm/print-rfm.component';
 import { PrintGwComponent } from './print-gw/print-gw.component';
 import { CalcAddrComponent } from './calc-addr/calc-addr.component';
 import { AllClassesComponent } from './all-classes/all-classes.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 export const routes: Routes = [
     { path: '', component: WelcomeComponent },
@@ -16,4 +17,5 @@ export const routes: Routes = [
     
     { path: 'rfm', component: PrintRfmComponent },
     { path: 'gw', component: PrintGwComponent },
+    { path: 'privacy-policy', component: PrivacyPolicyComponent }
 ];

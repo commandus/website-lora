@@ -9,5 +9,6 @@
     <mat-menu #menu="matMenu">
         <button i18n="@@home-page" mat-menu-item (click)="nav('/')">Home page</button>
         <app-dark-mode-switch i18n-matTooltip="@@light-or-dark-theme" matTooltip="Light or dark theme" [checked]="env.settings.darkMode" (darkThemeOn)="env.darkThemeOn($event)"></app-dark-mode-switch>
+        <button i18n="@@privacy-policy-menu" mat-menu-item (click)="nav('/privacy-policy')">Privacy policy</button>
     </mat-menu>
 </div>

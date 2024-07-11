@@ -95,7 +95,7 @@ export class CalcAddrComponent {
       this.binNwkid = v.binary.substring(v.prefixlen, v.prefixlen + v.nwkidlen);
       this.binAddr = v.binary.substring(v.prefixlen + v.nwkidlen);
       this.hexAddr = (parseInt(v.addr, 16) & ((1 << v.addrlen) - 1)).toString(16);
-    })
+    });
   }
 
   onSubmit() {

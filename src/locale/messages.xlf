@@ -6,7 +6,7 @@
         <source>Network types</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/all-classes/all-classes.component.html</context>
-          <context context-type="linenumber">1,3</context>
+          <context context-type="linenumber">1,4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="network-type" datatype="html">
@@ -132,6 +132,10 @@
           <context context-type="sourcefile">src/app/print-rfm/print-rfm.component.html</context>
           <context context-type="linenumber">21,22</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/qr-code/qr-code.component.html</context>
+          <context context-type="linenumber">55,56</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="network" datatype="html">
         <source>Network</source>
@@ -203,11 +207,11 @@
         <source>Bin</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-addr/calc-addr.component.html</context>
-          <context context-type="linenumber">46,47</context>
+          <context context-type="linenumber">47</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-netid/calc-netid.component.html</context>
-          <context context-type="linenumber">34,35</context>
+          <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="length-bits" datatype="html">
@@ -225,11 +229,11 @@
         <source>Hex</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-addr/calc-addr.component.html</context>
-          <context context-type="linenumber">70,71</context>
+          <context context-type="linenumber">71</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-netid/calc-netid.component.html</context>
-          <context context-type="linenumber">58,59</context>
+          <context context-type="linenumber">59</context>
         </context-group>
       </trans-unit>
       <trans-unit id="addresses" datatype="html">
@@ -243,22 +247,22 @@
         <source>Min</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-addr/calc-addr.component.html</context>
-          <context context-type="linenumber">88,89</context>
+          <context context-type="linenumber">89</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-netid/calc-netid.component.html</context>
-          <context context-type="linenumber">74,75</context>
+          <context context-type="linenumber">75</context>
         </context-group>
       </trans-unit>
       <trans-unit id="max" datatype="html">
         <source>Max</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-addr/calc-addr.component.html</context>
-          <context context-type="linenumber">89,90</context>
+          <context context-type="linenumber">90</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-netid/calc-netid.component.html</context>
-          <context context-type="linenumber">75,76</context>
+          <context context-type="linenumber">76</context>
         </context-group>
       </trans-unit>
       <trans-unit id="total-networks" datatype="html">
@@ -364,7 +368,7 @@
         <source>Network by device address</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-netid/calc-netid.component.html</context>
-          <context context-type="linenumber">1,2</context>
+          <context context-type="linenumber">1,3</context>
         </context-group>
       </trans-unit>
       <trans-unit id="device-adddress-is-hex" datatype="html">
@@ -410,11 +414,22 @@
           <context context-type="linenumber">6,7</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="qrcode" datatype="html">
+        <source>QR code</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/nav-menu/nav-menu.component.html</context>
+          <context context-type="linenumber">26,27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/nav-menu/nav-menu.component.ts</context>
+          <context context-type="linenumber">117</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="menu-aria-label" datatype="html">
         <source><x id="START_BLOCK_IF" equiv-text="@if (drawer.opened) {"/><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon&gt;"/>chevron_left<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/><x id="CLOSE_BLOCK_IF" equiv-text="}"/><x id="START_BLOCK_ELSE" equiv-text="@else {"/><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon&gt;"/>chevron_right<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/><x id="CLOSE_BLOCK_ELSE" equiv-text="}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/nav-menu/nav-menu.component.html</context>
-          <context context-type="linenumber">29,34</context>
+          <context context-type="linenumber">40,46</context>
         </context-group>
       </trans-unit>
       <trans-unit id="show-network" datatype="html">
@@ -495,7 +510,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-rfm/print-rfm.component.html</context>
-          <context context-type="linenumber">1,3</context>
+          <context context-type="linenumber">1,4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="radio-tip" datatype="html">
@@ -534,18 +549,32 @@
           <context context-type="linenumber">110</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="show-qrcode" datatype="html">
+        <source>Show identity QR code</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/nav-menu/nav-menu.component.ts</context>
+          <context context-type="linenumber">118</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tip-qr-code" datatype="html">
+        <source>QR code identifies end-point device</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/nav-menu/nav-menu.component.ts</context>
+          <context context-type="linenumber">120</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="hide-sidenav" datatype="html">
         <source>Hide sidenav</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/nav-menu/nav-menu.component.ts</context>
-          <context context-type="linenumber">116</context>
+          <context context-type="linenumber">126</context>
         </context-group>
       </trans-unit>
       <trans-unit id="show-sidenav" datatype="html">
         <source>Show sidenav</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/nav-menu/nav-menu.component.ts</context>
-          <context context-type="linenumber">116</context>
+          <context context-type="linenumber">126</context>
         </context-group>
       </trans-unit>
       <trans-unit id="hex-string" datatype="html">
@@ -654,7 +683,7 @@
         <source>BPS</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">95,96</context>
+          <context context-type="linenumber">96</context>
         </context-group>
       </trans-unit>
       <trans-unit id="rssi" datatype="html">
@@ -689,14 +718,14 @@
         <source>ACK</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">141,142</context>
+          <context context-type="linenumber">142</context>
         </context-group>
       </trans-unit>
       <trans-unit id="adr" datatype="html">
         <source>ADR</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">148,149</context>
+          <context context-type="linenumber">149</context>
         </context-group>
       </trans-unit>
       <trans-unit id="addrackreq" datatype="html">
@@ -710,7 +739,7 @@
         <source>optsNpayload</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">160,161</context>
+          <context context-type="linenumber">160,162</context>
         </context-group>
       </trans-unit>
       <trans-unit id="invalid-rfm-packet" datatype="html">
@@ -858,6 +887,87 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy-policy/privacy-policy.component.html</context>
           <context context-type="linenumber">60,62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="qrcode-identity" datatype="html">
+        <source>QR code identity</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/qr-code/qr-code.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="join_eui" datatype="html">
+        <source>Join EUI</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/qr-code/qr-code.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="eui_hint" datatype="html">
+        <source>EUI is hex number 8 bytes long (16 hex digits)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/qr-code/qr-code.component.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/qr-code/qr-code.component.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dev_eui" datatype="html">
+        <source>Device EUI</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/qr-code/qr-code.component.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="profile_id" datatype="html">
+        <source>Profile id</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/qr-code/qr-code.component.html</context>
+          <context context-type="linenumber">24,25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="profile_id_hint" datatype="html">
+        <source>Profile identifier is hex number 4 bytes long (8 hex digits)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/qr-code/qr-code.component.html</context>
+          <context context-type="linenumber">28,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="owner_token" datatype="html">
+        <source>Owner token</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/qr-code/qr-code.component.html</context>
+          <context context-type="linenumber">33,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="serial_number" datatype="html">
+        <source>Serial number</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/qr-code/qr-code.component.html</context>
+          <context context-type="linenumber">39,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="proprietary-property" datatype="html">
+        <source>Proprietary property</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/qr-code/qr-code.component.html</context>
+          <context context-type="linenumber">45,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add-crc" datatype="html">
+        <source>Add CRC</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/qr-code/qr-code.component.html</context>
+          <context context-type="linenumber">50,51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="urn" datatype="html">
+        <source>URN</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/qr-code/qr-code.component.html</context>
+          <context context-type="linenumber">63</context>
         </context-group>
       </trans-unit>
       <trans-unit id="menu" datatype="html">

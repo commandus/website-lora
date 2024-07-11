@@ -1,4 +1,4 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component, ElementRef, Input, Output, ViewChild } from '@angular/core';
 import { FormControl, Validators, FormsModule, ReactiveFormsModule, AbstractControl } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -16,6 +16,7 @@ import { MatSlideToggle } from '@angular/material/slide-toggle';
 })
 export class QrCodeComponent {
   urn = '';
+  @ViewChild('qrcodeimg') qrcodeimg!: ElementRef;
 
   @Input() @Output() value = new QRCode;
   join_eui = new FormControl(this.value.join_eui ? this.value.join_eui : '', [ Validators.required, this.EUIValidator ]);
@@ -60,7 +61,7 @@ export class QrCodeComponent {
     this.env.calc.urn(this.value).subscribe(v => {
       this.urn = v;
       this.env.calc.qr(this.value).subscribe(v => {
-        console.log(v);
+        this.qrcodeimg.nativeElement.innerHTML = v;
       });
     });
 

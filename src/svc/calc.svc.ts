@@ -59,5 +59,11 @@ export class CalcService {
     const request = ['urn', value.join_eui, value.dev_eui, value.profile_id, value.owner_token, value.serial_number, value.proprietary, value.requireCRC];
     return this.httpClient.post<string>(this.endpoint.url, request);
   }
+  qr(
+    value: QRCode
+  ): Observable<string> {
+    const request = ['qr', value.join_eui, value.dev_eui, value.profile_id, value.owner_token, value.serial_number, value.proprietary, value.requireCRC];
+    return this.httpClient.post(this.endpoint.url, request, { responseType: 'text' });
+  }
 
 }

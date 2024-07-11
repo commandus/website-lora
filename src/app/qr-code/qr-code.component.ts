@@ -59,6 +59,9 @@ export class QrCodeComponent {
   load() {
     this.env.calc.urn(this.value).subscribe(v => {
       this.urn = v;
+      this.env.calc.qr(this.value).subscribe(v => {
+        console.log(v);
+      });
     });
 
   }

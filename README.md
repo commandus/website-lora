@@ -68,3 +68,12 @@ wget -q -S -O - --post-data '["gw", "02bbe50000006cc3743eed467b227278706b223a5b7
 ng extract-i18n --output-path src/locale
 vi locale/messages.xlf
 ```
+
+```
+ng build --configuration=production
+cd dist/website-lora/browser/
+scp -r * andrei@lora.commandus.com:/var/www/html/lora
+scp -r * andrei@lora.commandus.com:/var/www/html/lora/en
+ng build --configuration=ru
+scp -r * andrei@lora.commandus.com:/var/www/html/lora
+```

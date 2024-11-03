@@ -6,12 +6,15 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Settings } from '../model/settings';
 import { CheckForUpdateService } from './sw-update.svc';
 import { OverlayContainer } from '@angular/cdk/overlay';
+import { WebPushSubscription } from '../model/webpushsubscription';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class EnvService{
+    VAPID_PUBLIC_KEY = 'BLxC6-PDx7g4ZhGrxRaXgmcdPFTCORqcpy51TD6TjTetWo_R7_NDeiOkWohO0n47dKG-vLNuNTCw_TsIJ86aQ-s';
+
     private versionSubject = new BehaviorSubject<boolean>(false);
     private pwaPlatformSubject = new BehaviorSubject<string>('');
     public isOnline = false;
@@ -24,6 +27,7 @@ export class EnvService{
 
     private isNewAppAvailable: Subscription;
     private renderer: Renderer2;
+    public webPushSubscription = new WebPushSubscription();
 
     constructor(
         private platform: Platform,

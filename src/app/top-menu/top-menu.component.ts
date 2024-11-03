@@ -6,12 +6,13 @@ import { Router } from '@angular/router';
 import { EnvService } from '../../svc/env';
 import { DarkModeSwitchComponent } from '../../dark-mode-switch/dark-mode-switch.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { SubscribeComponent } from "../subscribe/subscribe.component";
 
 
 @Component({
   selector: 'app-top-menu',
   standalone: true,
-  imports: [MatButtonModule, MatIconModule, MatMenuModule, MatTooltipModule, DarkModeSwitchComponent],
+  imports: [MatButtonModule, MatIconModule, MatMenuModule, MatTooltipModule, DarkModeSwitchComponent, SubscribeComponent],
   templateUrl: './top-menu.component.html',
   styleUrl: './top-menu.component.scss'
 })

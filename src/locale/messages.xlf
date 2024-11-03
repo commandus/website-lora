@@ -6,7 +6,7 @@
         <source>Network types</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/all-classes/all-classes.component.html</context>
-          <context context-type="linenumber">1,4</context>
+          <context context-type="linenumber">1,3</context>
         </context-group>
       </trans-unit>
       <trans-unit id="network-type" datatype="html">
@@ -207,11 +207,11 @@
         <source>Bin</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-addr/calc-addr.component.html</context>
-          <context context-type="linenumber">47</context>
+          <context context-type="linenumber">46,47</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-netid/calc-netid.component.html</context>
-          <context context-type="linenumber">35</context>
+          <context context-type="linenumber">34,35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="length-bits" datatype="html">
@@ -229,11 +229,11 @@
         <source>Hex</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-addr/calc-addr.component.html</context>
-          <context context-type="linenumber">71</context>
+          <context context-type="linenumber">70,71</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-netid/calc-netid.component.html</context>
-          <context context-type="linenumber">59</context>
+          <context context-type="linenumber">58,59</context>
         </context-group>
       </trans-unit>
       <trans-unit id="addresses" datatype="html">
@@ -247,22 +247,22 @@
         <source>Min</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-addr/calc-addr.component.html</context>
-          <context context-type="linenumber">89</context>
+          <context context-type="linenumber">88,89</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-netid/calc-netid.component.html</context>
-          <context context-type="linenumber">75</context>
+          <context context-type="linenumber">74,75</context>
         </context-group>
       </trans-unit>
       <trans-unit id="max" datatype="html">
         <source>Max</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-addr/calc-addr.component.html</context>
-          <context context-type="linenumber">90</context>
+          <context context-type="linenumber">89,90</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-netid/calc-netid.component.html</context>
-          <context context-type="linenumber">76</context>
+          <context context-type="linenumber">75,76</context>
         </context-group>
       </trans-unit>
       <trans-unit id="total-networks" datatype="html">
@@ -368,7 +368,7 @@
         <source>Network by device address</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calc-netid/calc-netid.component.html</context>
-          <context context-type="linenumber">1,3</context>
+          <context context-type="linenumber">1,2</context>
         </context-group>
       </trans-unit>
       <trans-unit id="device-adddress-is-hex" datatype="html">
@@ -429,7 +429,7 @@
         <source><x id="START_BLOCK_IF" equiv-text="@if (drawer.opened) {"/><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon&gt;"/>chevron_left<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/><x id="CLOSE_BLOCK_IF" equiv-text="}"/><x id="START_BLOCK_ELSE" equiv-text="@else {"/><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon&gt;"/>chevron_right<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/><x id="CLOSE_BLOCK_ELSE" equiv-text="}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/nav-menu/nav-menu.component.html</context>
-          <context context-type="linenumber">40,46</context>
+          <context context-type="linenumber">40,45</context>
         </context-group>
       </trans-unit>
       <trans-unit id="show-network" datatype="html">
@@ -510,7 +510,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-rfm/print-rfm.component.html</context>
-          <context context-type="linenumber">1,4</context>
+          <context context-type="linenumber">1,3</context>
         </context-group>
       </trans-unit>
       <trans-unit id="radio-tip" datatype="html">
@@ -683,7 +683,7 @@
         <source>BPS</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">96</context>
+          <context context-type="linenumber">95,96</context>
         </context-group>
       </trans-unit>
       <trans-unit id="rssi" datatype="html">
@@ -718,14 +718,14 @@
         <source>ACK</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">142</context>
+          <context context-type="linenumber">141,142</context>
         </context-group>
       </trans-unit>
       <trans-unit id="adr" datatype="html">
         <source>ADR</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">149</context>
+          <context context-type="linenumber">148,149</context>
         </context-group>
       </trans-unit>
       <trans-unit id="addrackreq" datatype="html">
@@ -739,7 +739,7 @@
         <source>optsNpayload</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-gw/print-gw.component.html</context>
-          <context context-type="linenumber">160,162</context>
+          <context context-type="linenumber">160,161</context>
         </context-group>
       </trans-unit>
       <trans-unit id="invalid-rfm-packet" datatype="html">
@@ -967,7 +967,21 @@
         <source>URN</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/qr-code/qr-code.component.html</context>
-          <context context-type="linenumber">63</context>
+          <context context-type="linenumber">62,63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="web-push-toggle-hint" datatype="html">
+        <source>Turn notifications on/off</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/subscribe/subscribe.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="web-push-toggle" datatype="html">
+        <source>Turn notifications on/off</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/subscribe/subscribe.component.html</context>
+          <context context-type="linenumber">3,4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="menu" datatype="html">
@@ -999,14 +1013,14 @@
         <source>Light or dark theme</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/top-menu/top-menu.component.html</context>
-          <context context-type="linenumber">11</context>
+          <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
       <trans-unit id="privacy-policy-menu" datatype="html">
         <source>Privacy policy</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/top-menu/top-menu.component.html</context>
-          <context context-type="linenumber">12,14</context>
+          <context context-type="linenumber">15,17</context>
         </context-group>
       </trans-unit>
       <trans-unit id="sidebar" datatype="html">
@@ -1034,7 +1048,7 @@
         <source>A new version is available</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/svc/env.ts</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="linenumber">45</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/svc/sw-update.svc.ts</context>
@@ -1045,7 +1059,7 @@
         <source>Update</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/svc/env.ts</context>
-          <context context-type="linenumber">42</context>
+          <context context-type="linenumber">46</context>
         </context-group>
       </trans-unit>
       <trans-unit id="update-failed" datatype="html">

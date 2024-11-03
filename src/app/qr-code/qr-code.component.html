@@ -1,0 +1,78 @@
+<span class="form-header" i18n="@@qrcode-identity">QR code identity</span>
+<form (ngSubmit)="onSubmit()">
+    <div fxLayout="row" fxLayoutAlign="stretch" >
+        <div>
+            <mat-form-field class="eui">
+                <mat-label i18n="@@join_eui">Join EUI</mat-label>
+                <input matInput type="text" [formControl]="join_eui" (change)="onSubmit()">
+            </mat-form-field>
+            @if(join_eui.invalid) {
+                <mat-error i18n="@@eui_hint">EUI is hex number 8 bytes long (16 hex digits)</mat-error>
+            }
+        </div>
+        <div>
+            <mat-form-field class="eui">
+                <mat-label i18n="@@dev_eui">Device EUI</mat-label>
+                <input matInput type="text" [formControl]="dev_eui" (change)="onSubmit()">
+            </mat-form-field>
+            @if(dev_eui.invalid) {
+                <mat-error i18n="@@eui_hint">EUI is hex number 8 bytes long (16 hex digits)</mat-error>
+            }
+        </div>
+        <div>
+            <mat-form-field class="profile-id">
+                <mat-label i18n="@@profile_id">Profile id</mat-label>
+                <input matInput type="text" [formControl]="profile_id" (change)="onSubmit()">
+            </mat-form-field>
+            @if(profile_id.invalid) {
+                <mat-error i18n="@@profile_id_hint">Profile identifier is hex number 4 bytes long (8 hex digits)</mat-error>
+            }
+        </div>
+        <div>
+            <mat-form-field class="fld">
+                <mat-label i18n="@@owner_token">Owner token</mat-label>
+                <input matInput type="text" [formControl]="owner_token" (change)="onSubmit()">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="fld">
+                <mat-label i18n="@@serial_number">Serial number</mat-label>
+                <input matInput type="text" [formControl]="serial_number" (change)="onSubmit()">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="fld">
+                <mat-label i18n="@@proprietary-property">Proprietary property</mat-label>
+                <input matInput type="text" [formControl]="proprietary" (change)="onSubmit()">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-slide-toggle i18n="@@add-crc" #toggle (change)="onSubmit()" [formControl]="requireCRC">Add CRC</mat-slide-toggle>
+        </div>
+        
+        <p style="padding: 10pt;"></p>
+        <div>
+            <button i18n="@@show" mat-raised-button color="primary" mat-button type="submit">Show</button>  
+        </div>
+        <p></p>
+        @if(urn) {
+        <div>
+            <table>
+                <tr>
+                    <td i18n="@@urn">URN</td>
+                </tr>
+                <tr>
+                    <td>
+                        {{urn}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div #qrcodeimg></div>
+                    </td>
+                </tr>
+           </table>
+        </div>
+    }
+    </div>
+</form>

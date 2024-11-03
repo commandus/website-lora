@@ -112,6 +112,16 @@ export class NavMenuComponent implements OnInit {
     }
   ];
 
+  qrcode: Section[] = [
+    {
+      name: $localize `:@@qrcode:QR code`,
+      desc: $localize `:@@show-qrcode:Show identity QR code`,
+      path: 'qr-code',
+      tip: $localize `:@@tip-qr-code:QR code identifies end-point device`,
+      icon: 'qr_code'
+    }
+  ];
+  
   drawerTip(opened: boolean) : string {
     return opened ? $localize `:@@hide-sidenav:Hide sidenav` : $localize `:@@show-sidenav:Show sidenav`
   }

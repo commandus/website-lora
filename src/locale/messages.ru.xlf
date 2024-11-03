@@ -582,6 +582,35 @@
           <context context-type="linenumber">110</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="qrcode" datatype="html">
+        <source>QR code</source>
+        <target>QR код</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/nav-menu/nav-menu.component.html</context>
+          <context context-type="linenumber">26,27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/nav-menu/nav-menu.component.ts</context>
+          <context context-type="linenumber">117</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="show-qrcode" datatype="html">
+        <source>Show identity QR code</source>
+        <target>Показать QR код устройства</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/nav-menu/nav-menu.component.ts</context>
+          <context context-type="linenumber">118</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tip-qr-code" datatype="html">
+        <source>QR code identifies end-point device</source>
+        <target>QR код идентифицирует конечное устройство</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/nav-menu/nav-menu.component.ts</context>
+          <context context-type="linenumber">120</context>
+        </context-group>
+      </trans-unit>
+
       <trans-unit id="hide-sidenav" datatype="html">
         <source>Hide sidenav</source>
         <target>Скрыть панель навигации</target>
@@ -940,6 +969,101 @@
           <context context-type="linenumber">54,57</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="qrcode-identity" datatype="html">
+        <source>QR code identity</source>
+        <target>QR код идентификатора устройства</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/qr-code/qr-code.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="join_eui" datatype="html">
+        <source>Join EUI</source>
+        <target>Join EUI (EUI приложения)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/qr-code/qr-code.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="eui_hint" datatype="html">
+        <source>EUI is hex number 8 bytes long (16 hex digits)</source>
+        <target>EUI - шестнадцатиричное число длиной в 8 байт (16 шестнадцатиричных символов)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/qr-code/qr-code.component.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/qr-code/qr-code.component.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+      </trans-unit>
+      
+      <trans-unit id="dev_eui" datatype="html">
+        <source>Device EUI</source>
+        <target>EUI устройства</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/qr-code/qr-code.component.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="profile_id" datatype="html">
+        <source>Profile id</source>
+        <target>Идентификатор профиля</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/qr-code/qr-code.component.html</context>
+          <context context-type="linenumber">24,25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="profile_id_hint" datatype="html">
+        <source>Идентификатор профиля - шестнадцатиричное число длиной в 4 байта (8 шестнадцатиричных символов)</source>
+        <target>EUI устройства</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/qr-code/qr-code.component.html</context>
+          <context context-type="linenumber">28,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="owner_token" datatype="html">
+        <source>Owner token</source>
+        <target>Токен владельца</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/qr-code/qr-code.component.html</context>
+          <context context-type="linenumber">33,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="serial_number" datatype="html">
+        <source>Serial number</source>
+        <target>Серийный номер</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/qr-code/qr-code.component.html</context>
+          <context context-type="linenumber">39,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="proprietary-property" datatype="html">
+        <source>Proprietary property</source>
+        <target>Проприетарное свойство</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/qr-code/qr-code.component.html</context>
+          <context context-type="linenumber">45,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add-crc" datatype="html">
+        <source>Add CRC</source>
+        <target>Добавить CRC</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/qr-code/qr-code.component.html</context>
+          <context context-type="linenumber">50,51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="urn" datatype="html">
+        <source>URN</source>
+        <target>URN</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/qr-code/qr-code.component.html</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+
+
       <trans-unit id="privacy-policy-h-8" datatype="html">
         <source>Consent</source>
         <target>Согласие</target>

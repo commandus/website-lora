@@ -22,6 +22,17 @@
                 </mat-list-item>
             </div>
             }
+            <mat-divider></mat-divider>
+            <div mat-subheader i18n="@@qrcode">QR code</div>
+            @for (p of qrcode; track qrcode) {
+                <div (click)="nav(p.path)">
+                <mat-list-item [matTooltip]="p.tip">
+                    <mat-icon matListItemIcon>{{p.icon}}</mat-icon>
+                    <div matListItemTitle>{{p.name}}</div>
+                    <div matListItemLine>{{p.desc}}</div>
+                </mat-list-item>
+            </div>
+            }
         </mat-selection-list>
     </mat-drawer>
     <mat-drawer-content class="nav-menu-sidenav-content">

@@ -7,6 +7,7 @@ import { KeyGenResponse } from '../model/keygenresponse';
 import { ClassResponse } from '../model/classesresponse';
 import { RFM } from '../model/rfm';
 import { GwResponse } from '../model/gwresponse';
+import { QRCode } from '../model/qrcode';
 
 class EndPoint {
   public url = '';
@@ -52,4 +53,17 @@ export class CalcService {
     const request = ['classes'];
     return this.httpClient.post<ClassResponse[]>(this.endpoint.url, request);
   }
+  urn(
+    value: QRCode
+  ): Observable<string> {
+    const request = ['urn', value.join_eui, value.dev_eui, value.profile_id, value.owner_token, value.serial_number, value.proprietary, value.requireCRC];
+    return this.httpClient.post<string>(this.endpoint.url, request);
+  }
+  qr(
+    value: QRCode
+  ): Observable<string> {
+    const request = ['qr', value.join_eui, value.dev_eui, value.profile_id, value.owner_token, value.serial_number, value.proprietary, value.requireCRC];
+    return this.httpClient.post(this.endpoint.url, request, { responseType: 'text' });
+  }
+
 }

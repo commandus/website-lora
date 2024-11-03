@@ -14,7 +14,7 @@
         "sourceLocale": "en",
         "locales": {
           "ru": {
-            "translation": "src/locale/messages.ru.xlf",
+            "translation": "src/locale/messages.ru.xlf"
           }
         }
       },
@@ -25,9 +25,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "localize": [
-              "ru"
-            ],
             "outputPath": "dist/website-lora",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -48,6 +45,26 @@
             "scripts": []
           },
           "configurations": {
+            "ru": {
+              "localize": [
+                "ru"
+              ],
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "1100kb",
+                  "maximumError": "2mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all",
+              "serviceWorker": "ngsw-config.json"
+            },
+
             "production": {
               "budgets": [
                 {
@@ -113,5 +130,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
